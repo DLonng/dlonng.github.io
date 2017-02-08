@@ -6,7 +6,7 @@ email: chengzhihjy@gmail.com
 description: "陈登龙个人博客，与你一起发现更大的世界。"
 keyword: "Linux, Driver"
 url: "https://cheng-zhi.github.io"              # your host, for absolute URL
-baseurl: "/cheng-zhi.github.io"                             # for example, '/blog' if your blog hosted on 'host/blog'
+baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 
 
