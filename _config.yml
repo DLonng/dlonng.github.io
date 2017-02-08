@@ -1,10 +1,10 @@
 # Site settings
-title: 橙煦园 
+title: 橙煦园
 SEOTitle: 陈登龙 | 橙煦园
 header-img: img/home-bg-o.jpg
 email: chengzhihjy@gmail.com
-description: "This is orange`s blog, Linux, kernel, Driver"
-keyword: "Linux, C, C++, LinuxKernel, LinuxDriver"
+description: "陈登龙个人博客，与你一起发现更大的世界。"
+keyword: "Linux, Driver"
 url: "https://cheng-zhi.github.io"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
@@ -65,8 +65,6 @@ kramdown:
 # Google Analytics
 #ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
 #ga_domain: cheng-zhi.github.io
-
-
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
