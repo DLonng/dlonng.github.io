@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Linux Driver Preparation"
+title:      "LinuxDriver-准备工作"
 subtitle:   "LinuxDriver"
 date:       2017-02-04 12:00:00
 author:     "陈登龙"
