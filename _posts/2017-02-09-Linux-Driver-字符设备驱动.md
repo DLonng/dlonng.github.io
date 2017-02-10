@@ -305,11 +305,12 @@ cdev_add(struct cdev *pcdev, dev_t devnum, unsigned count)
 在介绍这个函数之前，我们需要先了解2个结构体：
 
 **struct file**
+
 ``` c
 /*
-* 在Linux系统中,每一个打开的文件,在内核中都会关联一个struct file,它由内核在打开文件时创建, 在文件关闭后释放
-* 下面是两个比较重要的成员。
-*/
+ * 在Linux系统中,每一个打开的文件,在内核中都会关联一个struct file,它由内核在打开文件时创建, 在文件关闭后释放
+ * 下面是两个比较重要的成员。
+ */
 struct file {
 	/* 文件读写指针 */
 	loff_t f_pos;
