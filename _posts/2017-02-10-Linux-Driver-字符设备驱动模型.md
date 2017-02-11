@@ -1,8 +1,8 @@
 ---
 layout:     post
-title:        "LinuxDriver-字符设备驱动模型"
+title:      "LinuxDriver-字符设备驱动模型"
 subtitle:   "LinuxDriver"
-date:        2017-02-10 12:00:00
+date:       2017-02-10 12:00:00
 author:     "陈登龙"
 header-img: "img/post-bg-unix-linux.jpg"
 catalog: true
