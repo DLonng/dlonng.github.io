@@ -22,19 +22,19 @@ struct kobject，先看看这个结构体的定义：
 ``` c
 struct kobject
 	/* 设备名称 */
-	const char    *name;
+	const char *name;
 	/* 连接到kset建立层次结构 */
 	struct list_head entry;
 	/* kobject父节点 */
-	struct kobject  *parent;
+	struct kobject *parent;
 	/* 这个kobject所属的kset */
-	struct kset   *kset;
+	struct kset *kset;
 	/* kobject类型 */
 	struct kobj_type *ktype;
 	/* 在sysfs中的目录 */
 	struct sysfs_dirent *sd;
 	/* 这个对象的引用计数 */
-	struct kref   kref;
+	struct kref kref;
 	unsigned int state_initialized:1;
 	unsigned int state_in_sysfs:1;
 	unsigned int state_add_uevent_sent:1;
@@ -136,4 +136,4 @@ firmware：处理一些硬件设备固件的文件
 这三个模型是构成sysfs目录的底层结构，了解他们对驱动开发有一定的帮助。下面是kobject，kset，ktype的一张关系图，sysfs目录就是由这样的关系一层一层构成的。
 [sysfs底层结构图][1]
 
-  [1]: https://localhost:4000/img/post-2017-02-11-kernel-devices-mode.jpg
+  [1]: https://cheng-zhi.github.io/img/post-2017-02-11-kernel-devices-mode.jpg
