@@ -47,8 +47,11 @@ printk可以在控制台输出日志信息，它是**调试内核驱动最有效
 ```
 
 日志级别有如下**特点**：
+
 1.日志级别范围是：**0 - 7**
+
 2.没有指定日志级别的printk语句**默认级别是4**, 表示当**级别高于4**(0 - 3, **编号越小，级别越高**)的日志信息，将会在终端上打印。
+
 
 ``` c
 	/* 定义在kernel/printk.c中 */
@@ -92,125 +95,7 @@ dmesg通过查看**/proc/kmsg**文件可以输出**所有由printk打印的内�
 
 **三，第二种调试方法：oops**
 
-oops：**内核级的段错误**，内核发生崩溃(panic)时，调用**panic函数**所打印的信息。下面是panic.c的代码：
-
-``` c
-/**
- *panic - halt the system
- *@fmt: The text string to print
- *
- *Display a message, then perform cleanups.
- *
- *This function never returns.
- */
-NORET_TYPE void panic(const char * fmt, ...)
-{
-  static char buf[1024];
-  va_list args;
-  long i, i_next = 0;
-  int state = 0;
-
-
-  /*
-   * It's possible to come here directly from a panic-assertion and
-   * not have preempt disabled. Some functions called from here want
-   * preempt to be disabled. No point enabling it later though...
-   */
-  preempt_disable();
-
-
-  console_verbose();
-  bust_spinlocks(1);
-  va_start(args, fmt);
-  vsnprintf(buf, sizeof(buf), fmt, args);
-  va_end(args);
-  printk(KERN_EMERG "Kernel panic - not syncing: %s\n",buf);
-#ifdef CONFIG_DEBUG_BUGVERBOSE
-  dump_stack();
-#endif
-
-
-  /*
-   * If we have crashed and we have a crash kernel loaded let it handle
-   * everything else.
-   * Do we want to call this before we try to display a message?
-   */
-  crash_kexec(NULL);
-
-
-  kmsg_dump(KMSG_DUMP_PANIC);
-
-
-  /*
-   * Note smp_send_stop is the usual smp shutdown function, which
-   * unfortunately means it may not be hardened to work in a panic
-   * situation.
-   */
-  smp_send_stop();
-
-
-  atomic_notifier_call_chain(&panic_notifier_list, 0, buf);
-
-
-  bust_spinlocks(0);
-
-
-  if (!panic_blink)
-     panic_blink = no_blink;
-
-
-  if (panic_timeout > 0) {
-     /*
-      * Delay timeout seconds before rebooting the machine.
-      * We can't use the "normal" timers since we just panicked.
-      */
-     printk(KERN_EMERG "Rebooting in %d seconds..", panic_timeout);
-
-
-     for (i = 0; i < panic_timeout * 1000; i += PANIC_TIMER_STEP) {
-       touch_nmi_watchdog();
-       if (i >= i_next) {
-          i += panic_blink(state ^= 1);
-          i_next = i + 3600 / PANIC_BLINK_SPD;
-       }
-       mdelay(PANIC_TIMER_STEP);
-     }
-     /*
-      * This will not be a clean reboot, with everything
-      * shutting down.  But if there is a chance of
-      * rebooting the system it will be rebooted.
-      */
-     emergency_restart();
-  }
-#ifdef __sparc__
-  {
-     extern int stop_a_enabled;
-     /* Make sure the user can actually press Stop-A (L1-A) */
-     stop_a_enabled = 1;
-     printk(KERN_EMERG "Press Stop-A (L1-A) to return to the boot prom\n");
-  }
-#endif
-#if defined(CONFIG_S390)
-  {
-     unsigned long caller;
-
-
-     caller = (unsigned long)__builtin_return_address(0);
-     disabled_wait(caller);
-  }
-#endif
-  local_irq_enable();
-  for (i = 0; ; i += PANIC_TIMER_STEP) {
-     touch_softlockup_watchdog();
-     if (i >= i_next) {
-       i += panic_blink(state ^= 1);
-       i_next = i + 3600 / PANIC_BLINK_SPD;
-     }
-     mdelay(PANIC_TIMER_STEP);
-  }
-}
- 
-```
+oops：**内核级的段错误**，内核发生崩溃(panic)时，调用**panic函数**所打印的信息。
 
 
 oops分析方法
@@ -259,39 +144,6 @@ oops分析方法
 [ 25.562256] 5ed0 00000000 bf000154 bf00010c bf000154 bf00010c 00000001 d8b06d80 0000001c
 [ 25.570402] 5ef0 00000001 c008f71c bf000118 d8b75fb0 00000000 c008e7c0 bf000230 0000003f
 [ 25.578547] 5f10 d8b74000 e085024c e085024c 001abb66 d863aea0 e0850000 00006a59 e0854ac4
-[ 25.586695] 
-[ 25.586697] R5: 0xc07ec200:
-[ 25.590939] c200 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
-[ 25.599085] c220 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
-[ 25.607231] c240 00000004 00000014 00000003 00554e47 0597c863 2d620ffc 7c8e2cf6 854c7216
-[ 25.615376] c260 436fabe5 00000000 00000000 00000000 00000000 00000000 00000000 00000000
-[ 25.623522] c280 00000000 c0c351a5 00000000 00000000 00000000 c0c35080 c0c35180 00000000
-[ 25.631668] c2a0 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
-[ 25.639814] c2c0 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
-[ 25.647960] c2e0 0000000c 00000000 00000000 00000000 00000000 00000000 00000001 00000000
-[ 25.656106] 
-[ 25.656108] R6: 0xd8b73f80:
-[ 25.660351] 3f80 3fff6841 3fff6c41 3fffd841 3fffdc41 3fff7841 3fff7c41 3fff9841 3fff9c41
-[ 25.668497] 3fa0 3fff8841 3fff8c41 00000000 00000000 00000000 00000000 00000000 00000000
-[ 25.676643] 3fc0 38830811 38830c11 38831811 38831c11 38832811 38832c11 38833811 38833c11
-[ 25.684788] 3fe0 38834811 38834c11 38835811 38835c11 38836811 38836c11 3fffe821 3fffec21
-[ 25.692934] 4000 00000000 00000002 00000000 d8b2e080 c07a8bdc 00000000 00000015 d8b2e080
-[ 25.701080] 4020 d8b74000 c07a8040 c07a8040 d8b2da00 d8b38380 00000000 d8b75de4 d8b75db8
-[ 25.709226] 4040 c0549720 00000000 00000000 00000000 00000000 00000000 00010000 00000000
-[ 25.717371] 4060 001be4c0 00000000 00000000 00000000 00000000 00000000 00000000 00000000
-[ 25.725520] Process insmod (pid: 1069, stack limit = 0xd8b742f0)
-[ 25.731499] Stack: (0xd8b75eb0 to 0xd8b76000)
-[ 25.735833] 5ea0:                             00000000 bf002010 00000000 c0037494
-[ 25.743980] 5ec0: 00000001 c00c9790 00000007 d8ae0d80 00000000 bf000154 bf00010c bf000154
-[ 25.752126] 5ee0: bf00010c 00000001 d8b06d80 0000001c 00000001 c008f71c bf000118 d8b75fb0
-[ 25.760272] 5f00: 00000000 c008e7c0 bf000230 0000003f d8b74000 e085024c e085024c 001abb66
-[ 25.768418] 5f20: d863aea0 e0850000 00006a59 e0854ac4 e08548f7 e0856974 d8ae0c00 00000244
-[ 25.776563] 5f40: 00000394 00000000 00000000 0000002c 0000002d 00000012 00000000 0000000f
-[ 25.784708] 5f60: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 c00d49b8
-[ 25.792855] 5f80: 00000003 00000000 00000069 be96aea4 00000080 c00427e8 d8b74000 00000000
-[ 25.801001] 5fa0: 00000000 c0042640 00000000 00000069 001c6ff8 00006a59 001abb66 7fffffff
-[ 25.809146] 5fc0: 00000000 00000069 be96aea4 00000080 be96aea8 001abb66 be96aea8 00000000
-[ 25.817292] 5fe0: 00000001 be96ab44 00030010 000095e4 60000010 001c6ff8 fb5fbeff fffbef77
 
 
 //内核崩溃时的堆栈 [<地址>](函数名)，这个信息对于调试很有帮助
@@ -316,7 +168,7 @@ Unable to handle kernel NULL pointer dereference at virtual address 00000000 
 
 **2.函数调用栈**
 
-内核崩溃时的堆栈 [<地址>](函数名)，这个信息对于调试很有帮助，**最后被调用的函数栈在最上面**，上面的oops的函数调用栈：
+内核崩溃时的堆栈 [<地址>](函数名)，这个信息对于调试很有帮助，最后被调用的函数栈在最上面，例子的函数调用栈：
 
 ``` 
 [ 25.825451] [<bf000018>] (D+0x18/0x20 [oops_test]) from [<bf002010>] (myoops_init+0x10/0x1c [oops_test])
@@ -404,7 +256,6 @@ static void __exit cleanup_kprobe_sample(void) {
 
 
 MODULE_LICENSE("GPL"); 
- 
 module_init(init_kprobe_sample);
 module_exit(cleanup_kprobe_sample);
 ```
