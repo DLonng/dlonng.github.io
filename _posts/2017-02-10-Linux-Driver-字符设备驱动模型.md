@@ -105,7 +105,7 @@ memdev是字符设备文件名, 可以自定义.
 在任何一种驱动模型中,设备都会用内核中的一种结构来描述。我们的字符设备在内核中使用struct cdev来描述:
 
 ``` c
-#include <linux/dev.h>
+#include <linux/cdev.h>
 
 struct cdev {
 	struct kobject kobj;
@@ -249,7 +249,7 @@ void unregister_chrdev_region(dev_t devnum, unsigned int count);
 
 ``` c
 /* 需要的头文件 */
-#include <linux/dev.h>
+#include <linux/cdev.h>
 
 /* 静态分配的cdev */
 struct cdev mdev;
@@ -259,7 +259,7 @@ struct cdev mdev;
 
 ``` c
 /* 需要的头文件 */
-#include <linux/dev.h>
+#include <linux/cdev.h>
 
 /* pdev全局指针 */
 struct cdev *pdev = NULL;
@@ -285,7 +285,7 @@ cdev_init(struct cdev *pcdev, const struct file_operations *fops)
 
 ``` c
 /* 需要的头文件 */
-#include <linux/dev.h>
+#include <linux/cdev.h>
 
 /*
  * pcdev : cdev指针
@@ -400,7 +400,7 @@ loff_t (*llseek) (struct file *pfile, loff_t offset, int where);
 
 ``` c
 /* 需要的头文件 */
-#include <linux/dev.h>
+#include <linux/cdev.h>
 
 /*
  * pdev : 要释放的cdev指针
@@ -412,7 +412,7 @@ void cdev_del(struct cdev *pdev);
 
 ``` c
 /* 需要的头文件 */
-#include <linux/dev.h>
+#include <linux/cdev.h>
 
 /*
  * devnum : 要释放的设备号变量
