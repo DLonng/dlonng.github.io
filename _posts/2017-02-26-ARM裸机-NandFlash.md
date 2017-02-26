@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "ARM裸机-NandFlash"
-subtitle:   "ARM裸机"
+subtitle:   "ARM Tiny210 NandFlash"
 date:       2017-02-26 20:00:00
 author:     "陈登龙"
 header-img: "img/post-bg-unix-linux.jpg"
