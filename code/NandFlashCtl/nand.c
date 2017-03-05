@@ -64,12 +64,21 @@ int copy_nand_to_sdram(unsigned char *sdram_addr, unsigned long nand_addr, unsig
 	while (length) {
 		nand_send_cmd(NAND_CMD_READ_1st);
 		nand_send_addr(nand_addr);
+		
+		/* Write 1 to clear bit[4],so bit[4] = 0, manual set nand to busy.
+		 * bit[4] = 0, Nand is Busy.
+		 * bit[4] = 1, Nand is Ready.
+		 */
 		NFSTAT |= (NF_BUSY << 4);
+		
 		nand_send_cmd(NAND_CMD_READ_2st);
 		nand_wait_idle();
 		
 		/* 每次读取一页数据，每次拷贝1B，共拷贝2KB，循环length次. */
+
+		/* Get low 12Bit */
 		col = nand_addr % NAND_PAGE_SIZE;
+
 		for (i = col; (i < NAND_PAGE_SIZE) && (length != 0); i++, length--) {
 			*sdram_addr = nand_read();
 			sdram_addr++;
