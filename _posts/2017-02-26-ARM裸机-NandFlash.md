@@ -27,13 +27,18 @@ tags:
 **NandFlash结构：**
 
 Nand由许多块(Block)组成，一块由许多页(Page)组成(在操作Nand的时候，需要把地址转换成块地址或者页地址)。
+
 附加的OOB数据段：用来标识NandFlash数据是否是正确的，即是否存在坏的块。
 
 **3个相关的概念：**
 
 AddrCycle：读取一个地址的周期
+
 MLC：多状态，数据单元是多位
+
 SCL：单状态，数据单元是1Bit
+
+
 
 本次介绍Nand Flash相关操作。
 
