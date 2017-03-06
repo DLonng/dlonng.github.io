@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "UBoot-一个简单的myboot程序"
+title:      "UBoot-简单的myboot程序"
 subtitle:   "ARM S5PV210 UBoot"
 date:       2017-03-06 19:00:00
 author:     "陈登龙"
