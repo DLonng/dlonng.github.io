@@ -20,7 +20,7 @@ tags:
 
 **二，如何搬移？**
 
-**1.**我们需要在**board/samsung/goni/**这个目录下添加一个文件：**mmc_relocate.c**，内容如下
+**1.**我们需要在**board/samsung/goni/**这个目录下添加一个文件：**mmc_relocate.c**，
 下面的代码编写可以参考应用手册：**S5PV210_iROM_ApplicationNote_Preliminary_20091126**
 
 ``` c
@@ -59,7 +59,7 @@ void copy_code_to_dram(void){
 ``` makefile
 ...
 COBJS-y := goni.o onenand.o mmc_relocate.o
- ...
+...
 ```
 
 
@@ -101,6 +101,7 @@ sudo dd iflag=dsync oflag=dsync if=uboot.bin of=/dev/sdb seek=49
 **三，为UBoot配置DDR**
 
 **1.我们首先需要跳转到DDR的board_init_f这个函数去运行**
+
 vim start.S
 ``` 
 164     /* ldr  r0,=0x00000000 */
