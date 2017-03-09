@@ -15,8 +15,8 @@ tags:
 
 **一，board_init_f简介**
 
-当把整个uboot.bin从SD卡搬移到DDR中后，紧接着就是运行board_init_f这个函数，这个函数完成的主要功能是：**板级初始化前后部分**，
-**板级初始化后部分是在board_init_r**中完成的，我们以后介绍。
+当把整个uboot.bin从SD卡搬移到DDR中后，紧接着就是运行board_init_f这个函数，这个函数完成的主要功能是：**板级初始化前半部分**，
+**板级初始化后半部分是在board_init_r**中完成的，我们以后介绍。
 这次我们主要介绍board_init_f的主要功能。
 
 **二，board_init_f分析**
