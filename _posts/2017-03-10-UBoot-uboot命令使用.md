@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "UBoot-uboot命令使用"
-subtitle:   "S5PV210 UBoot bootm"
+subtitle:   "S5PV210 UBoot using cmd"
 date:       2017-03-10 22:00:00
 author:     "陈登龙"
 header-img: "img/post-bg-uboot.jpg"
