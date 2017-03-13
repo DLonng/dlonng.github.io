@@ -35,8 +35,11 @@ Kconfig -> make menuconfig -> .config -> Makefile
 ```
 
 **Kconfig**：是配置信息的清单
+
 **make menuconfig**：是根据Kconfig的信息启动菜单配置界面
+
 **.config**：是当前内核使用的配置文件
+
 **主目录Makefile**：在主目录下的Makefile是核心Makefile，比较复杂，平台无关，通用，但是又必须指定的体系结构，因此，主目录的Makefile必须跟arch/具体体系结构$(hdr-arch)/Makefile相关。
 
 我们打开主Makefile，查看下面这几行：
@@ -71,7 +74,7 @@ Kconfig -> make menuconfig -> .config -> Makefile
 
 编辑主目录下的Makefile，修改架构平台和工具链
 
-``` objectivec
+``` ruby
 #指定当前编译架构，默认x86
 195 ARCH        ?= arm
 	
@@ -122,9 +125,13 @@ make modules
 拷贝之后，重新make uImage即可，最后你会在**arch/arm/boot/**下得到**uImage**文件。
 
 这里简单介绍下vmlinux, Image,zImage,uImage的区别，因为他们在编译内核过程中都会生成。
+
 **vmlinux**：ELF文件，不能在开发板执行
+
 **Image**：由vmlinux通过objcopy生成，文件较大，不适合下载执行
+
 **zImage**：压缩过的Image，带自解压功能, 但是需要启动条件，引导比较麻烦
+
 **uImage**：经过mkimage工具处理，是uboot可以引导的镜像
 
 **4.** 运行内核
