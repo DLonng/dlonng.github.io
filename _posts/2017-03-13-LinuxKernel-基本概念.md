@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "LinuxKernel-基本概念1"
+title:      "LinuxKernel-基本概念"
 subtitle:   "S5PV210 Kernel"
 date:       2017-03-13 11:00:00
 author:     "陈登龙"
@@ -10,7 +10,7 @@ tags:
     - LinuxKernel
 ---
 
-# LinuxKernel-基本概念1
+# LinuxKernel-基本概念
 
 **一，Linux内核特性**
 
