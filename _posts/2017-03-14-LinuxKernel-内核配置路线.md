@@ -37,6 +37,7 @@ tags:
  11 source "arch/$SRCARCH/Kconfig"
 ```
 介绍3个Kconfig的主要命令：
+
 **1.source**
 
 通过source命令包含具体架构下的Kconfig，$SRCARCH = arm，source命令类似于include
