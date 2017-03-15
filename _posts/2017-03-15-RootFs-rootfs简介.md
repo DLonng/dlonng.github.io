@@ -1,16 +1,16 @@
 ---
 layout:     post
-title:      "LinuxKernel-rootfs简介"
-subtitle:   "S5PV210 Kernel rootfs "
+title:      "RootFs-rootfs简介"
+subtitle:   "S5PV210 rootfs "
 date:       2017-03-15 18:00:00
 author:     "陈登龙"
-header-img: "img/post-bg-linuxkernel.jpg"
+header-img: "img/post-bg-EMSLinux.jpg"
 catalog: true
 tags:
-    - LinuxKernel
+    - 嵌入式Linux
 ---
 
-# LinuxKernel-rootfs简介
+# RootFs-rootfs简介
 
 **一，rootfs简介**
 
