@@ -2,7 +2,7 @@
 layout:     post
 title:      "LinuxKernel-bootargs"
 subtitle:   "S5PV210 Kernel bootargs "
-date:       2017-03-15 10:00:00
+date:       2017-03-15 16:00:00
 author:     "陈登龙"
 header-img: "img/post-bg-linuxkernel.jpg"
 catalog: true
