@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "LinuxKernel-内核系列文章"
-subtitle:   "S5PV210 Kernel CharDriver "
+subtitle:   "S5PV210 Kernel CSDN"
 date:       2017-03-15 10:00:00
 author:     "陈登龙"
 header-img: "img/post-bg-linuxkernel.jpg"
