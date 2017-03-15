@@ -11,7 +11,7 @@ tags:
 ---
  
  
- # LinuxKernel-添加驱动到内核
+# LinuxKernel-添加驱动到内核
  
  
  **一，内核驱动和裸机驱动的区别**
