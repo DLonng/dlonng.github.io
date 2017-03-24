@@ -10,6 +10,9 @@ tags:
     - LinuxDriver
 ---
 
+# LinuxDriver-Key中断
+
+
 **一，Key中断简介**
 
 之前我们了解了在app中使用while循环来不断检测Key的状态，这种方法会占用几乎全部的CPU资源，非常的不可取，这次我们来学习下如何在Linux驱动中为Key注册中断处理程序，使用中断来返回按键的次数给用户空间。
