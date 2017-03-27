@@ -41,9 +41,9 @@ void down(struct semaphore *sem);
 void down_interruptible(struct semaphore *sem);
 
 /* 
- *尝试获取sem，如果能够立刻获取，就返回0, 否则立刻返回非0值，
+ * 尝试获取sem，如果能够立刻获取，就返回0, 否则立刻返回非0值，
  * 在使用的时候不能获取一般返回-ERESTARTSYS 
-  */
+ */
 void down_trylock(struct semaphore *sem);
 
 /* 释放sem，并唤醒睡眠的进程 */
