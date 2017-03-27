@@ -1,17 +1,17 @@
 ---
 layout:     post
-title:      "LinuxDriver-原子变量"
-subtitle:   "LinuxDriver Atomic"
+title:      "LinuxKernel-Atomic"
+subtitle:   "LinuxKernel Atomic"
 date:       2017-03-26 21:00:00
 author:     "陈登龙"
-header-img: "img/post-bg-unix-linux.jpg"
+header-img: "img/post-bg-linuxkernel.jpg"
 catalog: true
 tags:
-    - LinuxDriver
+    - LinuxKernel
 ---
 
 
-# LinuxDriver-原子变量
+# LinuxKernel-Atomic
 
 **一，原子变量简介**
 
