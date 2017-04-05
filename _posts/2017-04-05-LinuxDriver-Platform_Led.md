@@ -11,7 +11,7 @@ tags:
 ---
 
 
-**一，Platform简介**
+# **一，Platform简介**
 
 Platform是Linux2.6内核之后添加的一套**设备驱动模型**，该模型和已经存在的IIC，SPI等平台设备具有相似的结构，只不过Platform是一种**虚拟的总线**，挂接在SoC内存空间的外设等依附与这种虚拟的总线，挂接在这种总线上的设备称为**platform_device**，而相应的设备驱动称之为**platform_driver**。
 
