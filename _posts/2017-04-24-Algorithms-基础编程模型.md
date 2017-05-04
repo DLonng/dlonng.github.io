@@ -48,6 +48,6 @@ tags:
 * 学会在命令行中进行输入输出的重定向。
 
 #### About Me
-* cheng-zhi：自动化专业，喜欢 Android，不只是 App。
+* cheng-zhi：C/C++。
 * Github：[cheng-zhi](https://github.com/cheng-zhi)
 * 个人主页：[cheng-zhi](https://cheng-zhi.github.io/)
