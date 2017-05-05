@@ -4,7 +4,7 @@ title:      "Effective C++ 读书笔记(一)"
 subtitle:   "Effective C++"
 date:       2017-05-04 21:00:00
 author:     "陈登龙"
-header-img: "img/post-bg-unix-linux.jpg"
+header-img: "img/post-bg-algorithms.jpg"
 catalog: true
 tags:
     - C++
@@ -15,33 +15,31 @@ tags:
 > 版权声明：本文为 cheng-zhi 原创文章，可以随意转载，但必须在明确位置注明出处！ 
 
 #### 资源管理 - 条款 16
-
 * 成对使用 new 和 delete 时要采取相同形式
 
-错误的做法：
+错误的做法： 
 
+``` c
     int *p;
 	delete []p;
 	
-    std::string *stringArray = new std::string[100];
+	std::string *stringArray = new std::string[100];
     delete stringArray;
-	
-	
+```
 
 正确的做法：
-
+``` c
     int *p;
     delete p;
     
     std::string *stringArray = new std::string[100];
     delete []stringArray;
-
+```
 原则：
 * 如果在 new 中使用了 []，必须在 delete 时加上 []，否则绝对不要加 [] 。
 * 当你的指针不是原始的简单数据类型时，delete 时加上 [] 。
 
 #### 设计与声明 - 条款 22
-
 * 将成员变量声明为 private
 
 错误的做法：
@@ -63,7 +61,6 @@ tags:
 
 
 #### 设计与声明 - 条款 23
-
 * 宁以 non - member，non-friend 替换 member 函数
 
 不好的做法：
