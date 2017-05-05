@@ -19,21 +19,21 @@ tags:
 
 错误的做法： 
 
-``` c
-    int *p;
+``` cpp
+	int *p;
 	delete []p;
 	
 	std::string *stringArray = new std::string[100];
-    delete stringArray;
+	delete stringArray;
 ```
 
 正确的做法：
-``` c
-    int *p;
-    delete p;
-    
-    std::string *stringArray = new std::string[100];
-    delete []stringArray;
+``` cpp
+	int *p;
+	delete p;
+	
+	std::string *stringArray = new std::string[100];
+	delete []stringArray;
 ```
 原则：
 * 如果在 new 中使用了 []，必须在 delete 时加上 []，否则绝对不要加 [] 。
