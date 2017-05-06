@@ -16,7 +16,8 @@ tags:
 
 ## 构造/析构/赋值 - 条款 10
 
-**令 operator= 返回一个 reference to *this **
+
+**令 operator= 返回一个 reference to *this**
 
 这个条款可以实现变量的**连锁赋值**问题，它被 C++ 所有内置类型和标准库的类型所遵守，我们也应当遵守。
 
