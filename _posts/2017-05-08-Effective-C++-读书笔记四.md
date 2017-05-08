@@ -12,7 +12,6 @@ tags:
 
 # Effective C++ 读书笔记(四)
 
-@(C++)[const|typename]
 
 ***
 > 版权声明：本文为 cheng-zhi 原创文章，可以随意转载，但必须在明确位置注明出处！ 
