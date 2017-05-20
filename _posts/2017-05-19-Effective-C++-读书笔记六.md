@@ -1,5 +1,5 @@
 ---
-yout:     	post
+layout:     	post
 title:      "Effective C++ 读书笔记(六)"
 subtitle:   "Effective C++"
 date:       2017-05-19 16:00:00
