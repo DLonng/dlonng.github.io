@@ -7,19 +7,23 @@ author:     "陈登龙"
 header-img: "img/post-bg-unix-linux.jpg"
 catalog: true
 tags:
-    - leveldb
+
+- leveldb
 ---
 
 
 # leveldb - Slice 分析
+
 ***
 > 版权声明：本文为 cheng-zhi 原创文章，可以随意转载，但必须在明确位置注明出处！ 
 
 ## 什么是 leveldb Slice？
 
+
 有许多优秀的 `C++` 框架都没有直接使用 `C++` 提供的 `string`，而是自己封装了一份字符串的操作，`Slice` 就是 `leveldb` 自己使用的字符串操作类。
 
 ## 源码位置
+
 
 `slice` 位于源码的这个位置：
 ```
@@ -28,6 +32,7 @@ leveldb/include/leveldb/slice.h
 
 
 ## 模仿实现
+
 
 学习大神的代码，最好的方式我认为是理解之后自己动手写一遍，即使是抄，对我们也是有帮助的，因为实践过的东西记忆更加深刻。
 ```cpp
