@@ -1,6 +1,6 @@
 ---
 layout:    	post
-title:      "leveldb-Slice 分析"
+title:      "leveldb Slice 分析"
 subtitle:   "leveldb"
 date:       2017-05-21 18:00:00
 author:     "陈登龙"
@@ -12,7 +12,7 @@ tags:
 ---
 
 
-# leveldb - Slice 分析
+# leveldb Slice 分析
 
 ***
 > 版权声明：本文为 cheng-zhi 原创文章，可以随意转载，但必须在明确位置注明出处！ 
