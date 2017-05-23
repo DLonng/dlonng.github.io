@@ -70,11 +70,9 @@ boost::circular_buffer<std::vector<GridData>> m_circularBuf;
 > 你需要学会使用 boost，即使不了解原理。
 
 ## About Me
-- cheng-zhi：C / C++
-- GitHub   ：[cheng-zhi](https://github.com/cheng-zhi)
-- 个人主页 ：[cheng-zhi](https://cheng-zhi.github.io/)
+- GitHub   ：https://github.com/cheng-zhi
+- 个人主页 ：https://cheng-zhi.github.io/
 - 微博     ：@cheng-zhi
-- 微信号   ：chengzhi-01
-- 微信公众号：记录我的成长与分享，欢迎扫码关注，id：growingshare
+- 微信公众号：growingshare
 
 ![ID:growingshare](https://cheng-zhi.github.io/img/wechart.jpg)
