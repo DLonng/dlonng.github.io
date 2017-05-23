@@ -1,13 +1,13 @@
 ---
 layout:    	post
 title:      "circular_buffer 简介及使用"
-subtitle:   "boost circular_buffer"
+subtitle:   "Boost circular_buffer"
 date:       2017-05-23 10:00:00
 author:     "陈登龙"
 header-img: "img/post-bg-unix-linux.jpg"
 catalog: true
 tags:
-    - boost
+    - Boost
 ---
 
 # circular_buffer 简介及使用
