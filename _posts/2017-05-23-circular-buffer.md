@@ -29,7 +29,7 @@ tags:
 
 
 ## 基本使用方法
-`circular_buffer` 的操作大多数都是放入数据，取出数据，所以常用下面 2 个函数：
+`circular_buffer` 的操作大多数都是放入数据，取出数据，所以常用下面 3 个函数：
 ```cpp
 boost::circular_buffer<int> cb(3);
 
@@ -54,7 +54,7 @@ cb.pop_front(); // 1 is removed.
 
 ![circular_buffer](https://cheng-zhi.github.io/img/C++/circular_buf_use.png)
 
-要注意的是，因为需要要求我们的表格每一行都有很多数据，所以我们使用 `vector` 来存储每一行的数据，`circular_buffer` 里面存储的是 `vector` 类型，也就是存储一行数据。
+要注意的是，因为项目需求要求我们表格每一行都要显示很多数据，所以我们使用 `vector` 来存储每一行的数据，而 `circular_buffer` 里面存储的是 `vector` 类型，也就是存储一行数据。
 
 ```cpp
 // 我们定义的缓冲区实际类型，每个 item 代表表格的一行数据
@@ -63,7 +63,9 @@ boost::circular_buffer<std::vector<GridData>> m_circularBuf;
 
 基本工作流程：
 1. 数据到来，新建一个 `std::vector<GridData>` 类型并用新的数据初始化，然后 `push_back` 到 `m_circularBuf` 中
-2. 遍历一次 `m_circularBuf`，将其中的每个 `item: std::vector<GridData>` 类型绑定到表格控件上。  		
+2. 遍历一次 `m_circularBuf`，将其中的每个 `item: std::vector<GridData>` 绑定到表格控件指定的一行上显示。  		
+
+如果你对这个需求有兴趣，你可以通过后面的方式联系我，我可以提供部分核心代码 ^_^。
 
 > 你需要学会使用 boost，即使不了解原理。
 
