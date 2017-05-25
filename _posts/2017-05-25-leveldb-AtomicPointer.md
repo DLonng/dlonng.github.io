@@ -20,34 +20,33 @@ tags:
 
 源文件位置：`leveldb/port/atomic_pointer.h`
 
-``` cpp
+```cpp
 class AtomicPointer {
-	private:
-		void* rep_;
-	public:
-		AtomicPointer() { }
-		explicit AtomicPointer(void* p) : rep_(p) {}
+  private:
+    void* rep_;
+  public:
+    AtomicPointer() { }
+    explicit AtomicPointer(void* p) : rep_(p) {}
 
-		// 不使用内存屏障的读操作，即不同步的读操作
-		inline void* NoBarrier_Load() const { return rep_; }
+    // 不使用内存屏障的读操作，即不同步的读操作
+    inline void* NoBarrier_Load() const { return rep_; }
 
-		// 同上，是不同步的写操作
-		inline void NoBarrier_Store(void* v) { rep_ = v; }
+    // 同上，是不同步的写操作
+    inline void NoBarrier_Store(void* v) { rep_ = v; }
 
-		// 使用内存屏障的读操作，即同步读
-		inline void* Acquire_Load() const {
-			void* result = rep_;
-			// 添加一个内存屏障，后面会有原理介绍
-			MemoryBarrier();
-			return result;
-		}
+    // 使用内存屏障的读操作，即同步读
+    inline void* Acquire_Load() const {
+      void* result = rep_;
+      // 添加一个内存屏障，后面会有原理介绍
+      MemoryBarrier();
+      return result;
+    }
 
-
-		// 使用内存屏障的写操作，即同步写
-		inline void Release_Store(void* v) {
-			MemoryBarrier();
-			rep_ = v;
-		}
+    // 使用内存屏障的写操作，即同步写
+    inline void Release_Store(void* v) {
+      MemoryBarrier();
+      rep_ = v;
+    }
 };
 
 ```
@@ -56,8 +55,7 @@ class AtomicPointer {
 
 ```cpp
 inline void MemoryBarrier() {
-
-	__asm__ __volatile__("" : : : "memory");
+  __asm__ __volatile__("" : : : "memory");
 }
 ```
 
