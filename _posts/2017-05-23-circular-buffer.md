@@ -13,7 +13,7 @@ date : 2017-05-23 10:00:00
 
 它的形状像下面这样：
 
-![circular_buffer](https://cheng-zhi.github.io/images/cb/circular_buffer.png)
+![circular_buffer](http://cheng-zhi.me/images/cb/circular_buffer.png)
 
 
 ## 基本实现原理
