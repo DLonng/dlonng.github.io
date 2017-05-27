@@ -13,7 +13,7 @@ date : 2017-05-23 10:00:00
 
 它的形状像下面这样：
 
-![circular_buffer](https://cheng-zhi.github.io/img/C++/cb/circular_buffer.png)
+![circular_buffer](http://cheng-zhi.me/img/C++/cb/circular_buffer.png)
 
 
 ## 基本实现原理
@@ -45,7 +45,8 @@ cb.pop_front(); // 1 is removed.
 ## 实际项目使用
 在最近的开发中，项目要求将动态的数据显示到表格中，**最新的数据在表格最上面，老的数据在最下面**，正好符合 `circular_buffer` 的使用场合，因此我们采用了 `circular_buffer` 这个数据结构并很好实现了这个功能，基本需求如下：
 
-![circular_buffer](https://cheng-zhi.github.io/img/C++/cb/circular_buf_use.png)
+![circular_buffer](http://cheng-zhi.me/img/C++/cb/circular_buf_use.png)
+
 
 要注意的是，因为项目需求要求我们表格每一行都要显示很多数据，所以我们使用 `vector` 来存储每一行的数据，而 `circular_buffer` 里面存储的是 `vector` 类型，也就是存储一行数据。
 

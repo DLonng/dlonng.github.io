@@ -12,9 +12,8 @@ date : 2017-05-24 18:00:00
 
 
 ## Arena 内存管理模型
-这是[罗道文](http://luodw.cc)网站上关于 `leveldb` 的一张 `Arena` 的内存模型图:
 
-![Arena 内存池模型](https://cheng-zhi.github.io/img/C++/leveldb/Arena.jpg)
+![Arena 内存池模型](http://cheng-zhi.me/img/C++/leveldb/Arena.png)
 
 `Arena` 使用下面几个成员变量来描述上面的模型图
 ```cpp
@@ -46,7 +45,6 @@ port::AtomicPointer memory_usage_;
 `Arena` 的源码位置：`/leveldb/util/arena.h`, `/leveldb/util/arena.cc`
 
 ```cpp
-// 良好的初始化风格
 Arena::Arena() : memory_usage_(0) {
   alloc_ptr_ = NULL;  
   alloc_bytes_remaining_ = 0;
