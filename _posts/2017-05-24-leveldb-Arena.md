@@ -13,7 +13,7 @@ date : 2017-05-24 18:00:00
 
 ## Arena 内存管理模型
 
-![Arena 内存池模型](http://cheng-zhi.me/img/C++/leveldb/Arena.png)
+![Arena 内存池模型](http://cheng-zhi.me/images/C++/leveldb/Arena.png)
 
 `Arena` 使用下面几个成员变量来描述上面的模型图
 ```cpp
