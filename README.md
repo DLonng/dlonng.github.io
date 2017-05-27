@@ -1,32 +1,15 @@
-# Scribble
+# cheng-zhi 的个人博客
 
-A Jekyll theme. [Demo :point_left:](http://scribble.muan.co/posts/scribble-the-jekyll-theme).
+基于 jekyll 搭建的个人博客，使用这个主题：[scribble](https://github.com/muan/scribble)
 
-![screenshot](https://cloud.githubusercontent.com/assets/1153134/23830104/6d4665e0-06b7-11e7-8805-57e73c346459.png)
+# 联系我
+- 个人主页：[cheng-zhi.me](http://cheng-zhi.me)
+- GitHub：[https://github.com/cheng-zhi](https://github.com/cheng-zhi)
+- 微博：@cheng-zhi
+- 微信：chengzhi-01
+- 微信公众号：GrowingShare
 
-## Get started
+![growingshare](http://cheng-zhi.me/images/wechart.jpg)
 
-1. [Fork the repository](https://github.com/muan/scribble/fork)
 
-2. Clone the repository: `git clone https://github.com/username/scribble`
 
-3. Run `bundle install`
-
-4. Run Jekyll: `bundle exec jekyll serve -w`
-
-5. Go to http://localhost:4000 for your site.
-
----
-
-## Make it yours
-
-1. Edit `_config.yml`, adn then rerun `jekyll serve -w`
-
-2. Change `about.md` for blog intro
-
-3. For domain settings see [the guide from GitHub](https://help.github.com/articles/setting-up-a-custom-domain-with-pages)
-
-## The end
-
-Like it? [Tell me](http://twitter.com/muanchiou).<br/>
-Problem? [Use GitHub Issues](https://github.com/muan/scribble).
