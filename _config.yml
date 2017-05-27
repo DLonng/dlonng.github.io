@@ -1,6 +1,6 @@
 # ----------- CONFIGURABLE START -----------
-title:            "写好每篇文章"
-description:      "用心写好每一篇文章"
+title:            "用心写作"
+description:      "用心写作"
 url:              http://cheng-zhi.me # Site url, without a slash at the end.
 signoff:          "cheng-zhi" # Your name
 facebook_appid:   # APP ID for like button, remove from /_includes/share.html if unwanted.

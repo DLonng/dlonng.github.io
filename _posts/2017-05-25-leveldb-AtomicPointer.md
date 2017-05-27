@@ -99,4 +99,3 @@ __memory_barrier();
 
 [Memory ordering](http://en.wikipedia.org/wiki/Memory_ordering)
 
-
