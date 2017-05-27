@@ -1,25 +1,23 @@
 ---
-layout: default
-description: "你来到了没有知识的荒原 :("
-header-img: "img/404-bg.jpg"
 permalink: /404.html
+layout: null
 ---
 
-
-<!-- Page Header -->
-<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-				<div class="site-heading" id="tag-heading">
-					<h1>404</h1>
-					<span class="subheading">{{ page.description }}</span>
-				</div>
-			</div>
-		</div>
-	</div>
-</header>
-
-<script>
-	document.body.classList.add('page-fullscreen');
-</script>
+<html>
+  <head>
+    <meta content='Scribble' property='og:title' />
+    <title>Scribble</title>
+    <link href='{{ site.url }}/images/fav.png' rel='shortcut icon'>
+    <link rel="stylesheet" href="{{ site.url }}/stylesheets/style.css"/>
+    <meta content='width=device-width, initial-scale=1.0, user-scalable=no' name='viewport'>
+    <meta content='text/html; charset=utf-8' http-equiv='content-type' />
+    <meta content='{{ site.url }}' property='og:url' />
+    <meta content="{{ site.description }}" property='og:description' />
+    <meta content="blog" property="og:type" />
+  </head>
+  <body class="lh-copy dark-gray ph3 pv5 f6 sans-serif tc bg-super-white">
+      <img src="{{ site.url }}/images/404.png" alt="not found" width="160" class="mb3" /><br>
+      <a href="{{ site.url }}" class="link blue hover-gray">Home</a>
+    </div>
+  </body>
+</html>

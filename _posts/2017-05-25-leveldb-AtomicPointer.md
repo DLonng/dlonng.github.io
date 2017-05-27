@@ -1,13 +1,6 @@
 ---
-layout:    	post
-title:      "leveldb AtomicPointer"
-subtitle:   "leveldb 内存屏障"
-date:       2017-05-25 11:00:00
-author:     "陈登龙"
-header-img: "img/post-bg-unix-linux.jpg"
-catalog: true
-tags:
-- leveldb
+title: leveldb AtomicPointer
+date : 2017-05-25 11:00:00
 ---
 
 # leveldb AtomicPointer
@@ -107,10 +100,3 @@ __memory_barrier();
 [Memory ordering](http://en.wikipedia.org/wiki/Memory_ordering)
 
 
-
-
-## About Me
-- GitHub   ：https://github.com/cheng-zhi
-- 个人主页 ：http://cheng-zhi.me
-- 微博     ：@cheng-zhi
-- 微信公众号：growingshare

@@ -1,0 +1,36 @@
+@import "https://unpkg.com/tachyons@4.6.1/css/tachyons.min.css";
+
+.bg-super-white { background: #f9f9f9; }
+.top-50 { top: 50% }
+.link:hover { background: url(/images/line.png) repeat-x left bottom; }
+
+/* Markdown styles */
+.markdown-body a {
+  text-decoration: none;
+  color: #357edd;
+}
+.markdown-body .highlighter-rouge {
+  padding: .25rem .5rem;
+}
+.markdown-body pre {
+  margin: 0;
+  overflow: auto;
+}
+.markdown-body > .highlighter-rouge,
+.markdown-body > blockquote {
+  padding: .5rem 4rem;
+  margin: 2em -4rem;
+}
+.markdown-body > hr {
+  margin: 2em -4rem;
+  border: 0;
+  border-bottom: 1px dotted #CCC;
+}
+
+.markdown-body blockquote {
+  background: #f9f9f9;
+  border-left: .2rem solid #ccc;
+  padding-left: 3.8rem;
+}
+
+/* end Markdown styles */
