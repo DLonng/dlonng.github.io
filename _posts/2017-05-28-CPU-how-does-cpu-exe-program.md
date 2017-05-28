@@ -47,7 +47,8 @@ int main(void) {
 
 程序从磁盘拷贝到内存中，CPU 从内存中取指令，然后解码，之后执行，最后将执行结果写回内存，这个过程可以用下面这个流程图来表示：
 
-![](http://upload-images.jianshu.io/upload_images/4613385-a443725f4f62e2a0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![](http://cheng-zhi.me/images/cpu_ins_loop.png)
 
 大体的流程了解即可，底层的东西深入比较复杂，有兴趣可以深入，下面来分析 CPU 的执行程序的具体流程。
 
