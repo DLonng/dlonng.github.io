@@ -30,8 +30,7 @@ int main(void) {
 所以假设上面的这段程序经过编译器编译过后，生成下面的一些信息：
 
 
-![指令地址和变量地址表](http://upload-images.jianshu.io/upload_images/4613385-af27dc1489e838b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
+![](http://cheng-zhi.me/images/cpu_exe/cpu_table.png)
 
 
 上面表格中的地址值都可以看做是编译器为我们指定的（假设 CPU 为 32 Bit，则一条指令 4 个字节，一个 int 也是 4 个字节，所以下面的指令地址和变量地址的偏移都为 4）：
@@ -48,7 +47,7 @@ int main(void) {
 程序从磁盘拷贝到内存中，CPU 从内存中取指令，然后解码，之后执行，最后将执行结果写回内存，这个过程可以用下面这个流程图来表示：
 
 
-![](http://cheng-zhi.me/images/cpu_ins_loop.png)
+![](http://cheng-zhi.me/images/cpu_exe/cpu_ins_loop.png)
 
 大体的流程了解即可，底层的东西深入比较复杂，有兴趣可以深入，下面来分析 CPU 的执行程序的具体流程。
 
