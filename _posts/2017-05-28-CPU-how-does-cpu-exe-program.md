@@ -30,15 +30,7 @@ int main(void) {
 所以假设上面的这段程序经过编译器编译过后，生成下面的一些信息：
 
 
-
-
-| Memory Addr |                           Function                       |     Asm code     |
-|:-----------:|:--------------------------------------------------------:|:----------------:|
-| 100         | 将内存地址 2000 存储的值 100 拷贝到 CPU 的寄存器 A 中    | LOAD A, 2000     |
-| 104         | 将内存地址 2004 存储的值 0.1 拷贝到 CPU 的寄存器 B 中    | LOAD B, 2004     |
-| 108         | 将寄存器 A 和 B 中的值相乘，把结果拷贝到寄存器 C 中      | Multiply C, A, B |
-| 112         | 将寄存器 C 中的结果写回到内存地址 2008 处| STORE C, 2008 | StORE C, 2008    | 
-
+![指令地址和变量地址表](http://upload-images.jianshu.io/upload_images/4613385-af27dc1489e838b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 
