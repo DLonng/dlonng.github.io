@@ -1,7 +1,9 @@
 ---
 title: How does CPU execute program ?
-date : 2017-05-28 18:00:00
+date: 2017-05-28 18:00:00
 ---
+
+
 
 # How does CPU execute program ?
 ***
