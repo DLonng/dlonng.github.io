@@ -188,6 +188,7 @@ Using `gzip` to compressed file :
 ```
 # 1.txt -> 1.gz
 gzip 1.txt
+
 # 1.gz -> 1.txt
 gzip -d 1.gz
 ```
