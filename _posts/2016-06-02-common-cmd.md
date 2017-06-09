@@ -1,99 +1,18 @@
 ---
-title: Using linux CMD
-date: 2016-06-06 12:00:00
+title: File System Command
+date: 2016-06-02 12:00:00
 ---
 
-# Using Linux CMD
+# File System Command
 ***
 > 版权声明：本文为 cheng-zhi 原创文章，可以随意转载，但必须在明确位置注明出处！ 
 
-## CMD Base 
-Firstly，we need to study some shell command base concept.
-#### CMD Format
-In linux，your CMD format look like below :
-```
-command [-options] -p
-```
-eg : list a directory file
-```
-ls -l /directory
-```
-
-#### Edit CMD
-Your can edit CMD in Terminal，you need to know the follwing 2 points :
-1. Linux is case sensitive，but window no.
-2. Using `HM` key to move cursor to CMD head，and `END` to CDM tail.
-
-#### CMD Wildcard
-Your can use wildcard in CMD，like below : 
-```
-# * represents multiple characters.
-ls *.c
-# ? only represents one characters.
-ls ?.c
-```
-
-You can use pipes to import the output of one process as input as another process :
-```
-# Search bash process from ps process output.
-ps -aux | grep "bash"
-```
-
-You can use input/output redirection : 
-```
-# Redirection Hello string to 1.txt
-echo "Hello" > 1.txt
-```
-
-#### CMD Help
-You can use Terminal help tool when you don`t use some CMD : 
-```
-man ls
-# or
-info ls
-```
-Note: We often use `man *`.
-
-#### CMD History
-You can use below CMD to view history command that you have typed :
-```
-# Show 12 history cmd.
-history 12
-```
-
-#### CMD Alias
-You can have an alias for your usual commands : 
-```
-# Note: = left and right can not leave spaces.
-alias my_ls="ls -l"
-```
-
-#### CMD Exit Shell
-Using `exit` to exit current shell : 
-```
-exit
-```
-
-Using `CTRL-C` or `q` to exit when you inside some documents.
-
-
-## CMD Category
-In Linux，you can use 5 category CMD : 
-1. File system CMD.
-2. Disk Management CMD.
-3. User Management CMD.
-4. NetWork Management CMD.
-5. System And Other CMD.
-
-
-## File System CMD
-This include 3 points : 
-1. Common CMD.
+File system command mainly included 3 points : 
+1. common command.
 2. zip and tar.
 3. compare and merge.
 
-### Common CMD
-
+### Common Command
 
 #### ls
 Using `ls` to list file :
@@ -151,7 +70,7 @@ cat 1.txt
 ```
 
 #### more
-Using `more` to show a file content and can flip :
+Using `more` to show a file content and flip :
 ```
 # Enter: next line，Space: next page.
 more 1.txt
@@ -159,7 +78,7 @@ more 1.txt
 #### less
 Using `less` to show a file content and can be forward or back page :
 ```
-# Using man less to search how to using less CMD.
+# Enter: next line，Space: next page，f: forward，b: back
 less 1.txt
 ```
 
@@ -170,7 +89,7 @@ cp 1.txt 1.txt.bak
 ```
 
 #### mv
-Using 'mv' to move or rename file :
+Using `mv` to move or rename file :
 ```
 # move 1.txt to ../
 mv 1.txt ../
@@ -209,12 +128,16 @@ Using `chmod` to change file permissions :
 ```
 # Hightest permissions.
 sudo chmod 777 1.txt
+
 # User add read-write-exe permissions.
 sudo chmod u+rwx 1.txt
+
 # Group delete rwx.
 sudo chmod g-rwx 1.txt
+
 # Other = permissions
 sudo chmod o=rwx 1.txt
+
 # All(User，Group，Other) = rwx = (7，7，7)
 sudo chmod a=rwx 1.txt
 ```
@@ -231,6 +154,9 @@ grep "Hello" 1.txt
 Using `find` to search something :
 ```
 find 1.txt
+
+# In current dir, find a file name with 1.* 
+find . -name "1.*"
 ```
 
 #### locate
@@ -282,8 +208,10 @@ Using `diff` to compare file :
 ```
 # Compare 1.txt and 2.txt
 diff -y 1.txt 2.txt
+
 # Compare with patch 
 diff -u 1.txt 2.txt
+
 # Export the patch into a file.
 diff -Nu 1.txt 2.txt > 12.patch
 ```
@@ -294,86 +222,3 @@ Using `patch` to patch up :
 # Automatic matching patch.
 patch -p0 < 12.patch
 ```
-
-## Disk Management CMD
-#### df
-Using `df` to show current disk status :
-```
-df
-```
-#### du
-Using `du` to show current directory size :
-```
-# Show MB Or GB
-du -sh
-# Show Bytes
-su -s
-```
-
-#### fdisk
-Using `fdisk` to create partition :
-```
-# Help : m，Partition : n，Exit : w
-sudo fdisk /dev/sdb
-```
-
-#### mkfs
-Using `mkfs` to create file system :
-```
-# [-t] : Format type
-sudo mkfs -t ext3 /dev/adb1
-```
-
-#### mount/umount
-Using `mount` to mount device :
-```
-# 1. create mount dir in /mnt
-mkdir /mnt/sdb
-
-# 2. mount device to /mnt/sdb
-sudo mount -t ext3 /dev/sdb1 /mnt/adb
-```
-
-Using `umount` to un mount device :
-```
-sudo umount /mnt/sdb
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
