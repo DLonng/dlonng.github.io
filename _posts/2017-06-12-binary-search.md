@@ -1,6 +1,6 @@
 ---
 title: Binary Search 
-date: 2016-06-13 11:00:00
+date: 2017-06-13 11:00:00
 ---
 
 # Binary Search
