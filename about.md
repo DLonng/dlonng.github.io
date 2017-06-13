@@ -11,5 +11,5 @@ title: About me
 - GitHub：[https://github.com/cheng-zhi](https://github.com/cheng-zhi)
 - 微博：@cheng-zhi
 - 微信：chengzhi-01
-- 微信公众号：GrowingShare，下面有二维码 ~
+- 微信公众号：CDeveloper，下面有二维码 ~
 
