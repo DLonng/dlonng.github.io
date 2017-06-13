@@ -135,7 +135,7 @@ binary_search_rec: mid = 2
 2
 ```
 
-Can be seen，we only need to find 2 times. But，for an ordered list，it is not the fastest algorithm. For example，finding 2 still takes 3 times，but **actually we can find 2 only once !**
+Can be seen，we only need to find 2 times. But，for an ordered list，it is not the fastest algorithm. For example，finding 2 still takes 2 times，but **actually we can find 2 only once !**
 
 Continue to see the faster algorithm below !
 
@@ -179,7 +179,7 @@ OK，now you **only need to replace how to calculate the expression of `mid`** c
 ```c
 int *binary_search_xxx(int *array, int length, int key) {
   ...
-  while {
+  while (low <= high) {
     // For array and division.
     mid = low + (high - low) * ((double)(key - array[low]) / (array[high] - array[low]));
     printf("binary_search_xxx: mid = %d\n", mid);
