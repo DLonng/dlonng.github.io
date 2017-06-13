@@ -119,7 +119,7 @@ int main(int argc, char **argv) {
 }
 ```
 
-Compile and run:
+Compile and run :
 ```
 gcc binary_search.c
 ./a.out 2
