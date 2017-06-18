@@ -42,7 +42,7 @@ date: 2017-06-17 11:00:00
 ### Translt
 Translt 是 Google Chrome 浏览器的一个**划词翻译插件**，你可以在谷歌商店里面直接搜索插件名称然后安装到浏览器中，即可在网页上用鼠标选择一个单词来实时翻译，看英文文档非常爽，不需要翻墙，但是必须要有网络。
 
-PS: 这里还要感谢 [stromzhang](http://stormzhang.com/) 分享了许多好用的插件。
+PS: 这里还要感谢 [stormzhang](http://stormzhang.com/) 分享了许多好用的插件。
 
 
 ### 最后
