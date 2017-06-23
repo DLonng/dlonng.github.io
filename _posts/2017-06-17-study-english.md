@@ -55,3 +55,64 @@ PS: 这里还要感谢 [stormzhang](http://stormzhang.com/) 分享了许多好�
 
 最后，祝愿大家都通过这次和下次的英语四六级 :)
 
+
+
+> 英文版本
+
+# Why are you also can not pass CET-4 / 6 ?
+
+### You love and hate today
+Today is the CET-4/6 exams，I do not how many boys and girls feel. If you think you can pass it，then i have to congratulate you，because you have more than a lot of student，do not underestimate this test，i have a lot of student not pass this test. If you think this time is over，i suggest you read this blog，it is my personal practical experience. Of course，if you can pass this time，it can also help you to prepare the next CET-6 exam. In fact，reading will take about 5 minutes or so.
+
+
+
+### Why are you also can not pass CET-4 / 6 ?
+First of all，ask yourself，do not study English. You may say，I want to learn but do not go in. For example，back words，do much boring question，not as good as playing LOL. When i hear this，i know that they are not bored English，but they do not use the English environment which makes learning English become a burden，naturally will produce conflict psychological. So the most effective and easiest way to learn English is to create a certain English environment for yourself，continuous accumulation and use of English，rather than reviewing weeks before the exam. Only in this way can you really learn English and fail in love with English，not just pass the exam.
+
+
+
+### But how do you create your own English environment ?
+This is not a uniform standard，because each persion's career are not the same. For example，I like programming and computer，my usual learning and living environment is in English which includes my computer and mobile phone system language，code comments，etc. I also often listen English songs :)，and I have begin to insist on using English to write technology blog，such as before writing a [Binary Search](http://cheng-zhi.me/posts/binary-search) blogwhich is the use of the most simple English words and sentences. But as long as you insist on writing，more practice，there will always be harvested，3 days fishing，2 days drying is useless，because no one can casually success.
+
+### Give a few occupations as an example.
+For example，if you like me is a programmer，you can imitate my practice，forcing yourself to use English learning environment and daily living environment. Because it can not only improve the ability of English，but also imporve the technology and taste. If you are English majors，but have not had pass this time，then you should go to communicate with your teacher. If you like to publicity，you can go to make foreigners，using English to promote your products. And if you often deal with literature，you can try to use English to write a novel，the first one is certainly hard to write but stick to it. When the famous literary writer ZhangAiling in Hong Kong，in order to execise her English ability，insisted on writing in English for 3 years. You shoule learn from her.
+
+In conclusion，you must have your own ideas，you shoule find a place to use English and can enhance your value，and then forced yourself use English. Those who can make great process in the final are forced to do not do good things finally make love，in the end got a lot of opportunities and has achieved great success. There are other occasions where you can execise English well，such as taking an English community，partcipating in an English speech contest，and so on...
+
+### Some learn English tools
+Now，the interent has provide us with too much learning materials and tools，i recommend here three of the tools i think are the best and every day i ise it.
+
+#### Speak fluent in English
+First of all，I do not advertise，I have entirely used the English fluent speak APP，feel useful. I used this APP every morining for 30 minutes in the last mouth，I feel really good，not only able to practice speaking，but also to learn a lot of interesting things. Your mobile phone only need to install this one to learn English APP is enough. Believe me，this is my personal experience，not chicken soup. Unfortunately，now everyone is holeing mobile phone brush dynamic，but have so little people to study use mobile phone really. If you can use your phone to improve your English level，then you are more than a lot of people. Yes，the Chinese people so much，as long as you serious，hard，insisted，you can more than a lot，after all，good people are always a few.
+
+#### Google Translte
+[Google Translte](https://translate.google.cn/)，which is Google's online translation tool. I have been using，it can translated between English and Chinese，the effect is very good. And it don't use VPN，Google produce，must be fine，highly recommended.
+
+#### Translt
+Translt is a wording translation plugin for Google Chrome. You can search the plugin directly int the Google store and install it in the Chrome browser.You can use the mouse to select a word on the page to real-time translation，see the English document is very cool，don't use VPN to access Google，but must be have a network.
+
+
+PS: Here also thanks to [stormzhang](http://stormzhang.com/) share a lot of easy to use plugins.
+
+### At last
+Above said so much，in fact，I introduced the three point :
+1. Try to create your own English environment and force yourself to use English. 
+2. Use fragmentation time to study in English speak fluently APP.
+3. Learn to use translation tools. 
+
+You just understand and seriously practice these three points，stick for a month，no effect is impossible，whether you believe it or not，i have a great deal of anyway. If you feel effective，then continue to stick to it and share it with your friends(Good things to share，happy to grow together). I believe that English will make your life path more flat.
+
+Finally，I wish everyone through this and the next four or six English.
+
+
+
+
+
+
+
+
+
+
+
+
+
