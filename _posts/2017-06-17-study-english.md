@@ -102,17 +102,4 @@ Above said so much，in fact，I introduced the three point :
 
 You just understand and seriously practice these three points，stick for a month，no effect is impossible，whether you believe it or not，i have a great deal of anyway. If you feel effective，then continue to stick to it and share it with your friends(Good things to share，happy to grow together). I believe that English will make your life path more flat.
 
-Finally，I wish everyone through this and the next four or six English.
-
-
-
-
-
-
-
-
-
-
-
-
-
+Finally，I wish everyone through this and the next four or six English :).
