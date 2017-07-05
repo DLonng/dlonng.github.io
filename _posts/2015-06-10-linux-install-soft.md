@@ -1,9 +1,9 @@
 ---
-title: Install Software To Linux
+title: 如何在 Linux 上安装普通应用程序？
 date : 2015-06-10 16:00:00
 ---
 
-# Install Software To Linux
+# 如何在 Linux 上安装普通应用程序？
 ***
 > 版权声明：本文为 cheng-zhi 原创文章，可以随意转载，但必须在明确位置注明出处！ 
 
