@@ -141,7 +141,7 @@ smbpasswd -a root
 ```
 /etc/init.d/samba status
 ```
-下面的圆圈显示为绿色表示启动成功，白色表示启动失败：
+下面的圆圈显示为绿色表示启动成功，否者启动失败：
 ```
 ● smbd.service - Samba SMB Daemon
 	Loaded: loaded (/lib/systemd/system/smbd.service; enabled; vendor preset: enabled)
