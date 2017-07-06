@@ -152,7 +152,7 @@ tar xjvf vim-7.4.tar.bz2
 cd vim74/
 ./configure
 ```
-**注意：配置过程中可能提示缺少 `libncurses5-dev` 这个依赖而结束，我们使用 `sudo apt-get libncurses5-dev` 安装即可，在重新配置之前，需要使用 `make clean` 先清理一次。**
+**注意：配置过程中可能提示缺少 `libncurses5-dev` 这个依赖而结束，我们使用 `sudo apt-get install libncurses5-dev` 安装即可，在重新配置之前，需要使用 `make clean` 先清理一次。**
 
 
 配置完成，开始 `make`，这个过程需要一段时间：
