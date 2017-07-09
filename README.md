@@ -9,7 +9,7 @@
 - 微信：chengzhi-01
 - 微信公众号：CDeveloper
 
-![cdeveloper](http://cheng-zhi.me/images/wechart.jpg)
+![cdeveloper](http://cdeveloper.cn/images/wechart.jpg)
 
 
 
