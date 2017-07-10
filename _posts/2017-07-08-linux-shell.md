@@ -136,7 +136,7 @@ myls ./
 1. **`Coreutils` 提供具体的命令功能的实现**，就是一个个的 C 语言写的工具，例如：`ls.c`，你自己也可以写这些工具。
 2. **`Bash` 等命令解释器来解释具体的命令**，例如：`ls` 命令，由 `Bash` 来解析 `Coreutils` 提供的 `ls.c` 的功能，**解析过程其实就是调用 Linux 系统底层类库来在屏幕上列出当前目录下的内容**。
 
-所以，我们必须要有这两部分才可以正常访问内核提供的功能。我们到 `GNU` 的官网去下载这两个软件包：[下载 Bash](https://directory.fsf.org/wiki/Bash)，[下载 Coreutils](https://directory.fsf.org/wiki/Coreutils)，**点击右侧的 Download 链接即可下载软件包**。
+所以，我们必须要有这两部分才可以正常访问内核提供的功能。我们到 `GNU` 的官网去下载这两个软件包：[下载 Bash](https://directory.fsf.org/wiki/Bash)，[下载 Coreutils](https://directory.fsf.org/wiki/Coreutils)，**点击右侧的 Download 链接即可下载软件包**，网速不好的同学，文末有百度云链接，我已经帮你们下载好了。
 
 大家一定要善于利用 GNU 的官网：
 ```
@@ -221,3 +221,10 @@ sudo make install
 
 ## 总结
 本次主要介绍了 Linux 命令的实现机制，了解这个机制，以后再使用命令的时候就不会陌生了，希望看完一定要实践，谢谢阅读 :)
+
+
+Bash-Coreutils: 链接 https://pan.baidu.com/s/1pKY3HiV 密码: h6x8
+
+
+
+
