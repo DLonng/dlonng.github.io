@@ -4,6 +4,8 @@ date:  2016-12-12 12:00:00
 ---
 
 # LinuxKernel - Semaphore
+***
+> 版权声明：本文为 {{ site.name }} 原创文章，可以随意转载，但必须在明确位置注明出处！ 
 
 ## Semaphore 简介
 

@@ -6,7 +6,7 @@ date : 2017-05-20 18:00:00
 
 # Google Test 系列之一 - HelloTest
 ***
-> 版权声明：本文为 cheng-zhi 原创文章，可以随意转载，但必须在明确位置注明出处！ 
+> 版权声明：本文为 {{ site.name }} 原创文章，可以随意转载，但必须在明确位置注明出处！ 
 
 ## 什么是 Google Test？
 `Google Test` 的全称是 `Google C++ Testing Framework`，它是 Google 开发的用于 C++ 的单元测试框架，优秀并且跨平台，github 地址：[Google Test](https://github.com/google/googletest)。

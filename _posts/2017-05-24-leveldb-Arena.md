@@ -5,7 +5,7 @@ date : 2017-05-24 18:00:00
 
 # leveldb Arena 分析
 ***
-> 版权声明：本文为 cheng-zhi 原创文章，可以随意转载，但必须在明确位置注明出处！ 
+> 版权声明：本文为 {{ site.name }} 原创文章，可以随意转载，但必须在明确位置注明出处！ 
 
 ## Arena
 `Arena` 是 `leveldb` 项目里面使用的轻量级的**内存池对象**，`leveldb` 用这个对象来管理内存的分配，简化了 `new` 和 `delete` 的调用，我们也可以从这个轻量级的内存池对象学习 `google` 大神工程师是如何管理内存的。
@@ -13,7 +13,7 @@ date : 2017-05-24 18:00:00
 
 ## Arena 内存管理模型
 
-![Arena 内存池模型](http://cheng-zhi.me/images/leveldb/Arena.png)
+![Arena 内存池模型]({{ site.url }}/images/leveldb/Arena.png)
 
 `Arena` 使用下面几个成员变量来描述上面的模型图
 ```cpp

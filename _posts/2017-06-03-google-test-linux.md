@@ -5,7 +5,7 @@ date: 2017-06-03 10:00:00
 
 # Linux install googletest
 ***
-> 版权声明：本文为 cheng-zhi 原创文章，可以随意转载，但必须在明确位置注明出处！ 
+> 版权声明：本文为 {{ site.name }} 原创文章，可以随意转载，但必须在明确位置注明出处！ 
 
 之前在 `Windows` 上编译并使用了 `googletest`，最近要在 `Linux` 上测试代码，也要用到 `googletest`，这里记录下安装的过程。
 

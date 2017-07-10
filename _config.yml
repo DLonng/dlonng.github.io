@@ -6,7 +6,7 @@ signoff:          "cdeveloper" # Your name
 facebook_appid:   # APP ID for like button, remove from /_includes/share.html if unwanted.
 google_analytics: UA-100342964-1 # Set tracking, remove from /javascripts/basic.js if unwanted.
 share:            false # Turn on twitter and facebook share buttons
-
+name:             cdeveloper
 links:
   - name:         Blog
     url:          /

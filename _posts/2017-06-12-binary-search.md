@@ -5,7 +5,7 @@ date: 2017-06-13 11:00:00
 
 # Binary Search
 ***
-> 版权声明：本文为 cheng-zhi 原创文章，可以随意转载，但必须在明确位置注明出处！ 
+> 版权声明：本文为 {{ site.name }} 原创文章，可以随意转载，但必须在明确位置注明出处！ 
 
 `Binary Search` is a basic search algorithm. Its basic idea is **each search is reduced by half of the data**. Such as，using `Binary Search` to search `2` in this table :
 
