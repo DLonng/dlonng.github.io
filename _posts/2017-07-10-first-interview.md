@@ -50,7 +50,7 @@ date : 2017-07-10 12:00:00
 
 简历是面试官对你的第一印象，我去面试的时候，**前台首先拿走了我的简历，因此面试官先看到你的简历，再看你**，简历的重要性不言而喻。
 
-这是我本次使用的简历模板，在「stormzhang」提供的模板上做了修改，链接: https://pan.baidu.com/s/1hrEznRA 密码: md8p
+这是我本次使用的简历模板，在「stormzhang」提供的模板上做了修改，链接: [https://pan.baidu.com/s/1hrEznRA](https://pan.baidu.com/s/1hrEznRA) 密码: md8p
 
 
 **2. 把字写好**
