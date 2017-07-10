@@ -223,7 +223,7 @@ sudo make install
 本次主要介绍了 Linux 命令的实现机制，了解这个机制，以后再使用命令的时候就不会陌生了，希望看完一定要实践，谢谢阅读 :)
 
 
-Bash-Coreutils: 链接 https://pan.baidu.com/s/1pKY3HiV 密码: h6x8
+Bash-Coreutils: 链接 [https://pan.baidu.com/s/1pKY3HiV](https://pan.baidu.com/s/1pKY3HiV) 密码: h6x8
 
 
 
