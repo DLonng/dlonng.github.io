@@ -1,0 +1,185 @@
+"-------------------------------vundle config--------------------------
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+Plugin 'tpope/vim-fugitive'
+" plugin from http://vim-scripts.org/vim/scripts.html
+" Plugin 'L9'
+" Git plugin not hosted on GitHub
+Plugin 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (i.e. when working on your own plugin)
+Plugin 'file:///home/gmarik/path/to/plugin'
+" The sparkup vim script is in a subdirectory of this repo called vim.
+" Pass the path to set the runtimepath properly.
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Install L9 and avoid a Naming conflict if you've already installed a
+" different version somewhere else.
+" Plugin 'ascenator/L9', {'name': 'newL9'}
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+
+Plugin 'godlygeek/tabular'
+
+"Plugin 'plasticboy/vim-markdown'
+
+Plugin 'suan/vim-instant-markdown'
+
+Plugin 'DoxygenToolkit.vim'
+
+Plugin 'Valloric/YouCompleteMe'
+
+Plugin 'majutsushi/tagbar'
+let g:tagbar_ctags_bin='ctags'            "ctags程序的路径
+let g:tagbar_width=30                    "窗口宽度的设置
+let g:tagbar_left=1
+"let g:tagbar_autofocus = 1
+let g:tagbar_map_openfold = "zv"
+autocmd BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx call tagbar#autoopen() "如果是c语言的程序的话，tagbar自动开启
+nnoremap <silent> <F2> :TagbarToggle<CR>
+
+"-----------------------------nerdtree-------------------------------------
+Plugin 'scrooloose/nerdtree'
+let NERDTreeWinPos='right'
+let NERDTreeWinSize=30
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+
+autocmd vimenter * NERDTree
+
+wincmd w
+autocmd VimEnter * wincmd w
+
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+map <F3> :NERDTreeToggle<CR>
+"-----------------------------nerdtree-------------------------------------
+
+
+"-----------------------------airline--------------------------------------
+Plugin 'bling/vim-airline'
+set laststatus=2
+"-----------------------------airline--------------------------------------
+
+
+
+"-----------------------------minibufexpl------------------------------------
+Plugin 'fholgado/minibufexpl.vim'
+let g:miniBufExplMapWindowNavVim = 1   
+let g:miniBufExplMapWindowNavArrows = 1   
+let g:miniBufExplMapCTabSwitchBufs = 1   
+let g:miniBufExplModSelTarget = 1  
+let g:miniBufExplMoreThanOne=0
+noremap <C-Down>  <C-W>j
+noremap <C-Up>    <C-W>k
+noremap <C-Left>  <C-W>h
+noremap <C-Right> <C-W>l
+
+map <T> :MBEbp<CR>
+map <R> :MBEbn<CR>
+"-----------------------------minibufexpl------------------------------------
+
+
+
+"-----------------------------winmanager------------------------------------
+
+"Plugin 'vim-scripts/winmanager'
+"let g:winManagerWindowLayout="NERDTree|Tagbar, minibufexpl"
+"let g:AutoOpenWinManager = 1 "这里要配合修改winmanager.vim文件，见下方说明"
+"let g:NERDTree_title="[NERDTree]"
+"function! NERDTree_Start()
+"	exec 'NERDTree'
+"endfunction
+"function! NERDTree_IsValid()
+"	return 1
+"endfunction
+"
+"let g:Tagbar_title = "[Tagbar]"
+"function! Tagbar_Start()
+"	"exe 'q' "执行一个退出命令，关闭自动出现的窗口"
+"	exe 'TagbarOpen'
+"endfunction
+"function! Tagbar_IsValid()
+"	return 1
+"endfunction
+"
+"let g:tagbar_vertical = 30
+"
+"nmap wm :WMToggle<CR>
+"
+"-----------------------------winmanager------------------------------------
+
+
+
+"--------------------doxygen---------------------
+"doxygen toolkit 
+let g:DoxygenToolkit_briefTag_pre="@synopsis  "
+let g:DoxygenToolkit_paramTag_pre="@param "
+let g:DoxygenToolkit_returnTag="@return   "
+let g:DoxygenToolkit_blockHeader=""
+let g:DoxygenToolkit_blockFooter=""
+let g:DoxygenToolkit_authorName="cheng-zhi"
+let g:DoxygenToolkit_licenseTag="GPL 2.0"
+
+let g:DoxygenToolkit_authorName="cheng-zhi, chengzhihjy@gmail.com"
+let s:licenseTag = "Copyright(C)\<enter>"
+let s:licenseTag = s:licenseTag . "For free\<enter>"
+let s:licenseTag = s:licenseTag . "All right reserved\<enter>"
+let g:DoxygenToolkit_licenseTag = s:licenseTag
+let g:DoxygenToolkit_briefTag_funcName="yes"
+let g:doxygen_enhanced_color=1
+
+
+"-----------------vim config----------------
+set fenc=utf-8
+set nocp
+set number
+set ai
+set si
+set tabstop=4
+set sw=4
+set ruler
+set incsearch
+set showmatch
+set matchtime=5
+set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+set termencoding=utf-8
+set encoding=utf-8
+syntax on
+set backspace=indent,eol,start
+
+
+"---------------file template-----------------
+autocmd BufNewFile *.c 0r /home/orange/.vim/template/c.tlp
+autocmd BufNewFile *.md 0r /home/orange/.vim/template/md.tlp
