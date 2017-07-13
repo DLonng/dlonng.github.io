@@ -1,11 +1,11 @@
 ---
-title: How does CPU execute program ?
+title: 亚马逊工程师都必须了解的 CPU 执行程序的原理
 date: 2017-05-28 18:00:00
 ---
 
 
 
-# How does CPU execute program ?
+# 亚马逊工程师都必须了解的 CPU 执行程序的原理
 ***
 > 版权声明：本文为 {{ site.name }} 原创文章，可以随意转载，但必须在明确位置注明出处！ 
 
