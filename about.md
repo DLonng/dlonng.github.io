@@ -10,7 +10,7 @@ title: About me
 
 ## 联系我
 - 个人主页：[cdeveloper.cn](http://cdeveloper.cn)
-- GitHub：[https://github.com/cheng-zhi](https://github.com/cheng-zhi)
+- GitHub：[https://github.com/cdevelopr](https://github.com/cdevelopr)
 - 微博：@cdeveloper
 - 微信：chengzhi-01
 - 间书：cdeveloper
