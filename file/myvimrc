@@ -43,25 +43,19 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-
-Plugin 'godlygeek/tabular'
-
-"Plugin 'plasticboy/vim-markdown'
-
-Plugin 'suan/vim-instant-markdown'
-
-Plugin 'DoxygenToolkit.vim'
-
-Plugin 'Valloric/YouCompleteMe'
-
+"------------------------------tagbar--------------------------------------
 Plugin 'majutsushi/tagbar'
 let g:tagbar_ctags_bin='ctags'            "ctags程序的路径
 let g:tagbar_width=30                    "窗口宽度的设置
 let g:tagbar_left=1
 "let g:tagbar_autofocus = 1
 let g:tagbar_map_openfold = "zv"
-autocmd BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx call tagbar#autoopen() "如果是c语言的程序的话，tagbar自动开启
+
+"如果是c语言的程序的话，tagbar自动开启
+autocmd BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx call tagbar#autoopen() 
+
 nnoremap <silent> <F2> :TagbarToggle<CR>
+
 
 "-----------------------------nerdtree-------------------------------------
 Plugin 'scrooloose/nerdtree'
@@ -112,55 +106,6 @@ map <R> :MBEbn<CR>
 
 
 
-"-----------------------------winmanager------------------------------------
-
-"Plugin 'vim-scripts/winmanager'
-"let g:winManagerWindowLayout="NERDTree|Tagbar, minibufexpl"
-"let g:AutoOpenWinManager = 1 "这里要配合修改winmanager.vim文件，见下方说明"
-"let g:NERDTree_title="[NERDTree]"
-"function! NERDTree_Start()
-"	exec 'NERDTree'
-"endfunction
-"function! NERDTree_IsValid()
-"	return 1
-"endfunction
-"
-"let g:Tagbar_title = "[Tagbar]"
-"function! Tagbar_Start()
-"	"exe 'q' "执行一个退出命令，关闭自动出现的窗口"
-"	exe 'TagbarOpen'
-"endfunction
-"function! Tagbar_IsValid()
-"	return 1
-"endfunction
-"
-"let g:tagbar_vertical = 30
-"
-"nmap wm :WMToggle<CR>
-"
-"-----------------------------winmanager------------------------------------
-
-
-
-"--------------------doxygen---------------------
-"doxygen toolkit 
-let g:DoxygenToolkit_briefTag_pre="@synopsis  "
-let g:DoxygenToolkit_paramTag_pre="@param "
-let g:DoxygenToolkit_returnTag="@return   "
-let g:DoxygenToolkit_blockHeader=""
-let g:DoxygenToolkit_blockFooter=""
-let g:DoxygenToolkit_authorName="cheng-zhi"
-let g:DoxygenToolkit_licenseTag="GPL 2.0"
-
-let g:DoxygenToolkit_authorName="cheng-zhi, chengzhihjy@gmail.com"
-let s:licenseTag = "Copyright(C)\<enter>"
-let s:licenseTag = s:licenseTag . "For free\<enter>"
-let s:licenseTag = s:licenseTag . "All right reserved\<enter>"
-let g:DoxygenToolkit_licenseTag = s:licenseTag
-let g:DoxygenToolkit_briefTag_funcName="yes"
-let g:doxygen_enhanced_color=1
-
-
 "-----------------vim config----------------
 set fenc=utf-8
 set nocp
@@ -178,8 +123,3 @@ set termencoding=utf-8
 set encoding=utf-8
 syntax on
 set backspace=indent,eol,start
-
-
-"---------------file template-----------------
-autocmd BufNewFile *.c 0r /home/orange/.vim/template/c.tlp
-autocmd BufNewFile *.md 0r /home/orange/.vim/template/md.tlp
