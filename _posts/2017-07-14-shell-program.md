@@ -1,9 +1,9 @@
 ---
-title: 技术干货：Linux Shell 编程基础，看这一篇就够了！
+title: Linux 系统基础 - Shell 编程基础
 date : 2017-07-14 18:00:00
 ---
 
-# 技术干货：Linux Shell 编程基础，看这一篇就够了！
+# Linux 系统基础 - Shell 编程基础
 ***
 > 版权声明：本文为 {{ site.name }} 原创文章，可以随意转载，但必须在明确位置注明出处！ 
 
