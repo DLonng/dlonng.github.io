@@ -1,6 +1,6 @@
 # ----------- CONFIGURABLE START -----------
 title:            "cdeveloper"
-description:      "用心写作"
+description:      "做一个有思想，有行动的人！"
 url:              http://cdeveloper.cn # Site url, without a slash at the end.
 signoff:          "cdeveloper" # Your name
 facebook_appid:   # APP ID for like button, remove from /_includes/share.html if unwanted.
