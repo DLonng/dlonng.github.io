@@ -1,7 +1,8 @@
 # ----------- CONFIGURABLE START -----------
 title:            "cdeveloper"
-description:      "做一个有思想，有行动的人！"
+description:      "读书，写作"
 url:              http://cdeveloper.cn # Site url, without a slash at the end.
+prompt:           "如果觉得文章对你有帮助，推荐关注我的微信公众号 CDeveloper（底部有二维码）"
 signoff:          "cdeveloper" # Your name
 facebook_appid:   # APP ID for like button, remove from /_includes/share.html if unwanted.
 google_analytics: UA-100342964-1 # Set tracking, remove from /javascripts/basic.js if unwanted.
