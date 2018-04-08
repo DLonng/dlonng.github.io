@@ -2,7 +2,7 @@
 title:            "cdeveloper"
 description:      "读书，写作"
 url:              http://cdeveloper.cn # Site url, without a slash at the end.
-prompt:           "如果觉得文章对你有帮助，推荐关注我的微信公众号 CDeveloper（底部有二维码）"
+prompt:           "欢迎关注我的公众号：「cdeveloper」"
 signoff:          "cdeveloper" # Your name
 facebook_appid:   # APP ID for like button, remove from /_includes/share.html if unwanted.
 google_analytics: UA-100342964-1 # Set tracking, remove from /javascripts/basic.js if unwanted.
@@ -12,15 +12,15 @@ links:
   - name:         Blog
     url:          /
     external:     false
-  - name:         About 
+  - name:         About
     url:          /about
-    external:     false 
+    external:     false
   - name:         Email
     url:          mailto:chengzhihjy@gmail.com
-    external:     true 
+    external:     true
   - name:         GitHub
     url:          https://github.com/cdevelopr
-    external:     true      
+    external:     true
 # ------------ CONFIGURABLE END ------------
 
 permalink:        /posts/:title
