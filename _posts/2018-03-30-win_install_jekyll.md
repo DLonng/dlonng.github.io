@@ -69,3 +69,6 @@ Devkit 安装完成
 话说，我安装过程中一个错误也没有，灰常顺利 ==，如果你出现安装错误，建议 Google 解决问题，祝你安装成功。
 
 > {{ site.prompt }}
+
+<div  align="center">
+<img src="http://cdeveloper.cn/images/wechart.jpg" width = "200" height = "200"/>

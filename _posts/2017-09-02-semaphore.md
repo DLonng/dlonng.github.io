@@ -5,7 +5,7 @@ date : 2017-09-02 12:00:00
 
 # Linux 高级编程 - 信号量 semaphore
 ***
-> 版权声明：本文为 {{ site.name }} 原创文章，可以随意转载，但必须在明确位置注明出处！ 
+> 版权声明：本文为 {{ site.name }} 原创文章，可以随意转载，但必须在明确位置注明出处！
 
 ## 信号量 semaphore
 信号量（semaphore）与之前介绍的管道，消息队列的等 IPC 的思想不同，**信号量是一个计数器**，用来为多个进程或线程提供对共享数据的访问。
@@ -72,10 +72,10 @@ int semop(int semid, struct sembuf *sops, size_t nsops);
 struct sembuf {
 	/* 信号量的个数，除非使用多个信号量，否则设置为 0 */
 	unsigned short sem_num;  
-	
+
 	/* 信号量的操作，-1 表示 p 操作，1 表示 v 操作 */
 	short          sem_op;   
-	
+
 	/* 通常设置为 SEM_UNDO，使得 OS 能够跟踪信号量并在没有释放时自动释放 */
 	short          sem_flg;  
 };
@@ -116,14 +116,14 @@ union semun {
 // 创建或获取一个信号量
 int sem_get(int sem_key) {
 	int sem_id = semget(sem_key, 1, IPC_CREAT | 0666);
-	
+
 	if (sem_id == -1) {
 		printf("sem get failed.\n");
 		exit(-1);
 	} else {
 		printf("sem_id = %d\n", sem_id);
 		return sem_id;
-	}	
+	}
 }
 ```
 创建或者获取成功打印信号量的 id，否则打印错误信息。
@@ -135,7 +135,7 @@ int sem_get(int sem_key) {
 int set_sem(int sem_id) {
 	union semun sem_union;  
 	sem_union.val = 1;  
-	if(semctl(sem_id, 0, SETVAL, sem_union) == -1) { 
+	if(semctl(sem_id, 0, SETVAL, sem_union) == -1) {
 		fprintf(stderr, "Failed to set sem\n");  
 		return 0;  
 	}
@@ -152,7 +152,7 @@ void del_sem(int sem_id) {
 	union semun sem_union;  
 	if(semctl(sem_id, 0, IPC_RMID, sem_union) == -1)  
 		fprintf(stderr, "Failed to delete sem, sem has been del.\n");  
-} 
+}
 ```
 第 3 个参数指定 `IPC_RMID` 来删除信号量。
 
@@ -161,7 +161,7 @@ void del_sem(int sem_id) {
 ```c
 // 减 1，加锁，P 操作
 void sem_down(int sem_id) {
-	if (-1 == semop(sem_id, &sem_lock, 1)) 
+	if (-1 == semop(sem_id, &sem_lock, 1))
 		fprintf(stderr, "semaphore lock failed.\n");
 }
 
@@ -183,11 +183,11 @@ int main(int argc, char **argv) {
 		printf("set sem failed.\n");
 		return -1;
 	}
-	
+
 	// P 操作
 	sem_down(sem_id);
 	printf("sem lock...\n");
-	
+
 	printf("do something...\n");
 	sleep(10);
 
@@ -197,7 +197,7 @@ int main(int argc, char **argv) {
 
 	// 第二次调用后删除信号量
 	if (argc == 1)
-		del_sem(sem_id);	
+		del_sem(sem_id);
 
 	return 0;
 }
@@ -266,11 +266,11 @@ int semflg;
 ### 2. semget 分析
 `semget` 函数为信号量开辟一片新的内存，内核中的调用如下，也是使用了 `ipc_ops` 这个数据结构：
 
-![semget]({{ site.url }}/images/sem/semget.png) 
+![semget]({{ site.url }}/images/sem/semget.png)
 
 其中回调了 `newary` 这个函数，它完成信号量的创建和获取：
 
-![newary]({{ site.url }}/images/sem/newary.png) 
+![newary]({{ site.url }}/images/sem/newary.png)
 
 可以看出，整个过程与消息队列和共享内存几乎相同。
 
@@ -278,13 +278,13 @@ int semflg;
 ### 3. semop 分析
 semop 对信号量进行 PV 操作，其中主要是对 `sem_op` 进行加 1 或者减 1，大体的过程如下：
 
-![semop]({{ site.url }}/images/sem/semop.png) 
+![semop]({{ site.url }}/images/sem/semop.png)
 
 
 ### 4. semctl 分析
 `semctl` 对信号量进行控制，主要是使用 `switch` 来判断当前的命令然后执行相应的操作：
 
-![semctl]({{ site.url }}/images/sem/semctl.png) 
+![semctl]({{ site.url }}/images/sem/semctl.png)
 
 要注意的是，主要的处理逻辑在 `semctl_main` 这个函数中，其中每个 cmd 都有具体的执行逻辑，有兴趣可以详细分析。
 
@@ -293,6 +293,7 @@ semop 对信号量进行 PV 操作，其中主要是对 `sem_op` 进行加 1 或
 本次就简单地介绍了信号量的基本操作和内核的实现机制，对与信号量的应用并没有介绍太多，更多的应用方法还需要在实际工作中去实践。建议你将共享内存，消息队列和信号量自己总结对照分析一遍，看看它们的实现机制是不是几乎相同的，这可以加深你对他们的理解，了解些原理总是有些好处的。那我们下次再见，谢谢你的阅读。
 
 
-> 欢迎关注我的微信公众号 CDeveloper （底部有二维码），一起做个有思想，有行动的人！
+> {{ site.prompt }}
 
-
+<div  align="center">
+<img src="http://cdeveloper.cn/images/wechart.jpg" width = "200" height = "200"/>
