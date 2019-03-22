@@ -31,4 +31,4 @@ date: 2018-07-17 23:00:00
 > {{ site.prompt }}
 
 <div  align="center">
-<img src="http://cdeveloper.cn/images/wechart.jpg" width = "200" height = "200"/>
+<img src="{{ site.url }}/images/wechart.jpg" width = "200" height = "200"/>

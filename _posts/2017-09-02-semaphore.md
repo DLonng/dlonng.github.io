@@ -296,4 +296,4 @@ semop 对信号量进行 PV 操作，其中主要是对 `sem_op` 进行加 1 或
 > {{ site.prompt }}
 
 <div  align="center">
-<img src="http://cdeveloper.cn/images/wechart.jpg" width = "200" height = "200"/>
+<img src="{{ site.url }}/images/wechart.jpg" width = "200" height = "200"/>

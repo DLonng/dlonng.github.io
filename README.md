@@ -2,16 +2,15 @@
 
 基于 jekyll 搭建的个人博客，使用这个主题：[scribble](https://github.com/muan/scribble)
 
-我目前是一名普通大学生，身上没有任何光环，只有一颗热爱技术，热爱写作，热爱行动和热爱分享的心，在这里我会一直坚持原创技术，只说真话！
+厦门大学控制工程研究生，热爱技术与写作，在这里我会一直坚持原创分享！
 
-# 联系我
-- 微博：@cdeveloper
-- 间书：cdeveloper
-- 知乎：cdeveloper
-- 个人主页：[cdeveloper.cn](http://cdeveloper.cn)
-- GitHub：[https://github.com/cdevelopr](https://github.com/cdevelopr)
-- 微信号：cdeveloperv
-- 微信公众号：「cdeveloper」
+## 联系我
+- 微博：@DLonngzZ
+- 知乎：DLonng
+- 个人主页：[dlonng.com](http://dlonng.com)
+- GitHub：[https://github.com/dlonng](https://github.com/dlonng)
+- 微信号：DLonngv
+- 微信公众号：「程序小哥」
 
 <div  align="center">
-<img src="http://cdeveloper.cn/images/wechart.jpg" width = "200" height = "200"/>
+<img src="http://dlonng.com/images/wechart.jpg" width = "200" height = "200"/>

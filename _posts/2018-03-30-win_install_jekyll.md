@@ -47,7 +47,7 @@ Devkit 安装完成
 等待安装完成。
 
 ## Install Bundle
-[我的博客](http://cdeveloper.cn/)基于 jekyll，启动需要安装 bundler:
+[我的博客]({{ site.url }}/)基于 jekyll，启动需要安装 bundler:
 
 	cd 博客目录下
 	gem install bundler
@@ -71,4 +71,4 @@ Devkit 安装完成
 > {{ site.prompt }}
 
 <div  align="center">
-<img src="http://cdeveloper.cn/images/wechart.jpg" width = "200" height = "200"/>
+<img src="{{ site.url }}/images/wechart.jpg" width = "200" height = "200"/>

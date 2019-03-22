@@ -47,3 +47,4 @@ cd 并没有歧视使用中文来搜索，如果我用英文搜索的结果不�
 
 <div  align="center">
 <img src="http://cdeveloper.cn/images/wechart.jpg" width = "200" height = "200"/>
+{{ site.url }}

@@ -45,4 +45,4 @@ Google Map 是谷歌提供的一套地图 API 接口，我们可以**免费**使
 > {{ site.prompt }}
 
 <div  align="center">
-<img src="http://cdeveloper.cn/images/wechart.jpg" width = "200" height = "200"/>
+<img src="{{ site.url }}/images/wechart.jpg" width = "200" height = "200"/>

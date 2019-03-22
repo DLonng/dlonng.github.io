@@ -11,7 +11,7 @@ date: 2018-05-11 17:00:00
 这个工具图标是这样的，网上可以「免费下载」：
 
 <div  align="center">
-<img src="http://cdeveloper.cn/images/everything/et.png" width = "200" height = "200"/>
+<img src="{{ site.url }}/images/everything/et.png" width = "200" height = "200"/>
 </div>
 
 启动界面如下，第一次启动需要初始化一段时间，初始化之后就会出现文件和路径信息，像下面这样：
@@ -30,4 +30,4 @@ date: 2018-05-11 17:00:00
 > {{ site.prompt }}
 
 <div  align="center">
-<img src="http://cdeveloper.cn/images/wechart.jpg" width = "200" height = "200"/>
+<img src="{{ site.url }}/images/wechart.jpg" width = "200" height = "200"/>

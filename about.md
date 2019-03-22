@@ -3,11 +3,11 @@ title: About me
 ---
 
 ## About me
-厦门大学控制工程研究生，热爱技术，写作，行动和分享，在这里我会一直坚持原创技术，只说真话！
+厦门大学控制工程研究生，热爱技术与写作，在这里我会一直坚持原创分享！
 
 ## 联系我
-- 微博：@dlonngzZ
-- 知乎：dlonng
+- 微博：@DLonngzZ
+- 知乎：DLonng
 - 个人主页：[dlonng.com](http://dlonng.com)
 - GitHub：[https://github.com/dlonng](https://github.com/dlonng)
 - 微信号：DLonngv

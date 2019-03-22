@@ -41,9 +41,9 @@ date: 2018-05-01 21:00:00
 ## 使用注意事项
 在使用编译出来的库时要注意，用什么编译器来编译库，就用什么编译器来编译你的项目。例如我使用 VS2015_x86 来编译 OSG，那么我在 Qt 中使用的时候也要使用 MSVC2015_x86 编译套件的 Qt，否则也是使用不了的，即**编译库和使用库的编译器要相同**。
 
-就这几点经验吧，有需要具体编译 OSG 库的过程的可以看看我之前的[这篇文章](http://cdeveloper.cn/posts/qt-osg)。
+就这几点经验吧，有需要具体编译 OSG 库的过程的可以看看我之前的[这篇文章]({{ site.url }}/posts/qt-osg)。
 
 > {{ site.prompt }}
 
 <div  align="center">
-<img src="http://cdeveloper.cn/images/wechart.jpg" width = "200" height = "200"/>
+<img src="{{ site.url }}/images/wechart.jpg" width = "200" height = "200"/>

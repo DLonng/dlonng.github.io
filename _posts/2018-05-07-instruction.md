@@ -10,7 +10,7 @@ date: 2018-05-07 18:00:00
 很多读者朋友可能都还不知道我是谁，只是知道我是学习 C/C++ 的，最初关注我也是因为「stormzhang」在他的公众号中推荐了我，图片我还保存了，心存感激。
 
 <div  align="center">
-<img src="http://cdeveloper.cn/images/cdeveloper.png" width = "200" height = "350"/>
+<img src="{{ site.url }}/images/cdeveloper.png" width = "200" height = "350"/>
 </div>
 
 这一晃，已经过去大半年了，期间我进行过一次考研，公众号闲置了 2 个多月，但是令我惊讶的是公众号的取关人数非常的少，可以看出张哥粉丝的质量都是非常高的，这里也向大家对我一直的支持表示衷心的感谢。
@@ -57,4 +57,4 @@ date: 2018-05-07 18:00:00
 > {{ site.prompt }}
 
 <div  align="center">
-<img src="http://cdeveloper.cn/images/wechart.jpg" width = "200" height = "200"/>
+<img src="{{ site.url }}/images/wechart.jpg" width = "200" height = "200"/>
