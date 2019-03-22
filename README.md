@@ -1,4 +1,4 @@
-# cdeveloper 的个人博客
+# DLonng 的个人博客
 
 基于 jekyll 搭建的个人博客，使用这个主题：[scribble](https://github.com/muan/scribble)
 
