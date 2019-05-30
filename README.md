@@ -13,7 +13,7 @@
 - 微博：[DLonngzZ](https://weibo.com/6431777967/profile?topnav=1&wvr=6&is_all=1)
 - 个人微信：「DLonng」
   <div  align="center">
-  <img src="http://dlonng.com/images/DLonng.jpg" width = "180" height = "180"/>
+  <img src="http://dlonng.com/images/DLonng.png" width = "180" height = "180"/>
 
 - 微信公众号：「程序小哥」
   <div  align="center">
