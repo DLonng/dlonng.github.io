@@ -3,7 +3,7 @@ title: About me
 ---
 
 ## About me
-厦门大学研究生，Go 语言爱好者，热爱技术与写作，一个坚持精品原创的技术人！
+厦门大学控制工程研究生，热爱技术与写作，一个坚持精品原创的技术人！
 
 - GitHub：[DLonng](https://github.com/dlonng)
 - 知乎：[程序小哥](https://www.zhihu.com/people/DLonng/activities)

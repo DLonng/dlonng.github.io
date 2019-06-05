@@ -2,7 +2,7 @@
 
 基于 jekyll 搭建的个人博客，使用这个主题：[scribble](https://github.com/muan/scribble)
 
-厦门大学研究生，Go 语言爱好者，热爱技术与写作，一个坚持精品原创的技术人！
+厦门大学控制工程研究生，热爱技术与写作，一个坚持精品原创的技术人！
 
 ## 联系我
 - GitHub：[DLonng](https://github.com/dlonng)
