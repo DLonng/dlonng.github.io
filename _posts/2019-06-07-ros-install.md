@@ -25,7 +25,7 @@ https://download3.vmware.com/software/wkst/file/VMware-workstation-full-10.0.0-1
 
 直接复制链接到迅雷里面下载会很快，不要直接到官网下。
 
-我的 Github 上有注册码软件，下载下来就有注册码了：[VMware10 注册码](https://github.com/DLonng/dlonng.github.io/tree/master/file/vm)
+我的 Github 上有注册码软件，下载下来就有注册码了：[VMware10 注册码](https://github.com/DLonng/dlonng.github.io/releases/tag/1.0)
 
 如果你使用 VirtualBox 虚拟机软件，官网已经提供了已经配置好的环境：[VirtualBox ROS](http://nootrix.com/downloads/#RosVM)，不过还是建议你自己动手配置一下。
 
