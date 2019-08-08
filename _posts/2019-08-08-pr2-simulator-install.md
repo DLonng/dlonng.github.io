@@ -48,7 +48,12 @@ rosrun gazebo_ros gazebo
 </div>
 
 ## 二、安装 PR2 模拟器
-因为 zsh 不支持通配符安装，所以要先在 .zshrc 末尾加上 `setopt nomatch`，然后就可以使用下面的方式安装 PR2 了：
+注意下，因为 zsh 不支持通配符安装，所以要先在 .zshrc 末尾加上 setopt nomatch，然后就支持通配符安装了：
+<div  align="center">
+<img src="{{ site.url }}/images/zsh/nomatch.png"/>
+</div>
+
+然后就可以使用下面的方式安装 PR2 了：
 ```
 sudo apt-get install ros-kinetic-pr2-*
 ```
@@ -58,7 +63,14 @@ sudo apt-get install ros-kinetic-pr2-*
 ```
 roscore
 ```
-一次性加载 PR2 到 Gazebo：
+这里要再注意下，如果你联着网，那可能启动不了 roscore，这是你需要在 .bashrc 或者 .zshrc 末尾加上下面 2 行：
+
+```
+export ROS_HOSTNAME=localhost
+export ROS_MASTER_URI=http://localhost:11311
+```
+
+然后我们一次性加载 PR2 到 Gazebo：
 ```
 roslaunch pr2_gazebo pr2_empty_world.launch
 ```
@@ -77,6 +89,11 @@ roslaunch pr2_teleop teleop_keyboard.launch
 <div  align="center">
 <img src="{{ site.url }}/images/ros/PR2/key_pr2.png"/>
 </div>
+
+今天就到这，后续会更新更多关于 PR2 的学习笔记，欢迎感兴趣的朋友持续关注，我是新手，内行大哥们嘴下留情。。。。
+
+另外，我的机器人学习笔记会同步更新到我的 Github，推荐关注：
+https://github.com/DLonng/Robot
 
 > {{ site.prompt }}
 
