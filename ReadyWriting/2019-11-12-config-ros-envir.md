@@ -15,21 +15,27 @@ date: 2019-06-14 20:00:00
 学习 ROS 环境变量的目的是为了更好的管理 ROS 项目，不同版本的 ROS 安装完都会提供一个 setup.*sh 文件，当我们使用 source 命令执行某个分支的 setup.*sh，即可切换到对应版本的 ROS 环境下。
 
 要查看当前的 ROS 相关的环境变量，执行下面的命令：
-
+```
 printenv | grep ROS
+```
+
+<div  align="center">
+<img src="https://dlonng.com/images/ros/config_envir.png"/>
+</div>
+
 
 补充：这个命令的意思是把 printenv 的输出通过 Linux 下的进程间通信方式管道 | 来作为 grep 命令的输入，而 grep ROS 的作用是从输入中查找含有 ROS 关键字的行。
 
 注意查看 ROS_ROOT 和 ROS_PACKAGE_PATH 的路径是否是你安装的 ROS 版本。
 
 在我们安装完 K 版本的 ROS 后，需要在终端 source 一下对应的 setup.*sh 脚本：
-
+```
 source /opt/ros/kinetic/setup.bash
-
+```
 我使用的是 zsh：
-
+```
 source /opt/ros/kinetic/setup.zsh
-
+```
 建议你体验下 zsh，极度舒适：[Ubuntu install oh-my-zsh](https://dlonng.com/posts/install-zsh)
 
 执行完命令后就可以使用 ROS 提供的功能了，但是当我们新开一个终端后，又要重新执行上面的命令，非常麻烦，怎么办呢？
@@ -39,19 +45,15 @@ source /opt/ros/kinetic/setup.zsh
 补充：使用 echo $SHELL 查看你当前使用的是什么 shell。
 
 然后用 vim 或者你喜欢的编辑器打开你终端的启动脚本，把上面的命令加到文件末尾就行了：
-
+```
 “ bash
 source /opt/ros/kinetic/setup.bash
+```
 
+```
 ” zsh
 source /opt/ros/kinetic/setup.zsh
-
-
-
-
-<div  align="center">
-<img src="https://dlonng.com/images/xxx/xxx.png"/>
-</div>
+```
 
 > {{ site.prompt }}
 
