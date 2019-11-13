@@ -1,6 +1,6 @@
 ---
 title: ROS 初级 - 安装和配置 ROS 环境
-date: 2019-06-14 20:00:00
+date: 2019-11-12 20:00:00
 ---
 # ROS 初级 - 安装和配置 ROS 环境
 ***
@@ -20,7 +20,7 @@ printenv | grep ROS
 ```
 
 <div  align="center">
-<img src="https://dlonng.com/images/ros/config_envir.png"/>
+<img src="https://dlonng.com/images/ros/config_envir/ros_env.png"/>
 </div>
 
 
