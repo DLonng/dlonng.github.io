@@ -24,7 +24,7 @@ printenv | grep ROS
 </div>
 
 
-补充：这个命令的意思是把 printenv 的输出通过 Linux 下的进程间通信方式管道 | 来作为 grep 命令的输入，而 grep ROS 的作用是从输入中查找含有 ROS 关键字的行。
+> 补充：这个命令的意思是把 printenv 的输出通过 Linux 下的进程间通信方式管道 | 来作为 grep 命令的输入，而 grep ROS 的作用是从输入中查找含有 ROS 关键字的行。
 
 注意查看 ROS_ROOT 和 ROS_PACKAGE_PATH 的路径是否是你安装的 ROS 版本。
 
@@ -42,7 +42,7 @@ source /opt/ros/kinetic/setup.zsh
 
 其实非常简单，我们可以将上面的命令加到终端的启动脚本末尾，例如 bash 对应 ~/.bashrc，zsh 对应 ~/.zshrc。
 
-补充：使用 echo $SHELL 查看你当前使用的是什么 shell。
+> 补充：使用 echo $SHELL 查看你当前使用的是什么 shell。
 
 然后用 vim 或者你喜欢的编辑器打开你终端的启动脚本，把上面的命令加到文件末尾就行了：
 ```
@@ -54,6 +54,37 @@ source /opt/ros/kinetic/setup.bash
 ” zsh
 source /opt/ros/kinetic/setup.zsh
 ```
+
+## 3、创建 ROS 工作空间
+使用下面的命令来创建一个 ROS 空间：
+
+```
+# 在用户主目录创建目录 catkin_ws/src
+mkdir -p ~/catkin_ws/src
+# 进入 ros 工作目录
+cd ~/catkin_ws
+# make 一下
+catkin_make
+```
+
+执行完后，你会在当前目录下发现 build，devel 文件夹以及 src 目录下多了一个 CMakeLists.txt 文件。
+
+在 devel 目录下，也会生成 setup.zsh(bash) 文件，我们 source devel 下的 setup.zsh(bash) 文件会覆盖之前我们在终端脚本中配置的 source 环境。
+
+但这一步是必要的，因为以后我们编译自己的 ros 包时，需要使用当前工作目录的环境，因此需要执行这一步：
+
+```
+source devel/setup.zsh(bash)
+```
+
+我们可以再查看下环境变量：
+```
+echo $ROS_PACKAGE_PATH
+/home/dlonng/catkin_ws/src:/opt/ros/kinetic/share
+```
+可以看到当前工作目录一已经被加入到 ROS 环境中了。至此，ROS 环境配置完成，下一篇开始学习 ROS 的基本命令。
+
+
 
 > {{ site.prompt }}
 
