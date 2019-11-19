@@ -45,6 +45,23 @@ sudo apt-get install terminator
 
 开启你的 vim IDE 之旅吧！
 
+
+
+### 3、常用分屏快捷键
+
+- Ctrl + Shift + E：垂直分割窗口
+- Ctrl + Shift + O：水平分割窗口
+- Ctrl + Tab：分割窗口之间切换
+- Ctrl + Shift + C：在 Shell 中复制
+- Ctrl + Shift + V：在 Shell 中粘贴
+- exit：输入 exit 命令退出当前窗口
+- Ctrl + Super（Win）+ 方向上：最大化窗口
+- Ctrl + Super（Win）+ 方向下：最小化窗口
+- Ctrl + Super（Win）+ 方向左：把 Shell 窗口移动到屏幕左半边
+- Ctrl + Super（Win）+ 方向右：把 Shell 窗口移动到屏幕右半边
+
+
+
 > {{ site.prompt }}
 
 <div  align="center">
