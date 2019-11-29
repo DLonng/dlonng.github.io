@@ -14,7 +14,7 @@ ROS 服务是 ROS 提供的一种节点之间相互通信的方式，一个服�
 
 
 
-## 2、rosservice
+##  2、rosservice
 
 rosservice 命令可以对服务进行操作，比如调用服务，显示服务类型等，如下：
 
@@ -102,7 +102,105 @@ rosservice call /clear
 <img src="http://wiki.ros.org/ROS/Tutorials/UnderstandingServicesParams?action=AttachFile&do=get&target=turtlesim.png"/>
 </div>
 
+那🈶参数的服务如何调用呢？再来看看 spawn 服务的参数，这个服务可以在指定的位置和方向产生一个新的小乌龟：
 
+```sh
+rosservice type /spawn | rossrv show
+
+float32 x
+float32 y
+float32 theta
+string name
+---
+string name
+```
+
+来调用这个服务试试吧：
+
+```sh
+rosservice call /spawn 2 2 0.2 ""
+```
+
+上面的调用命令中的 2 2 0.2 "" 分别对应 spawn 服务的 4 个参数，其中 name 没有指定，但系统会自动赋值一个名称，运行的结果如下，产生一个新的小乌龟：
+
+<div  align="center">
+<img src="http://wiki.ros.org/ROS/Tutorials/UnderstandingServicesParams?action=AttachFile&do=get&target=turtle%28service%29.png"/>
+</div>
+
+并且运行完 spawn 服务后，命令行会返回新产生小乌龟的名称，我们调用的时候没有指定名称 name，所以系统就自己取了名字：
+
+```sh
+name：tutle2
+```
+
+
+
+## 3、rosparam
+
+rosparam 命令允许我们在 ROS 参数服务器上存储和操作数据，数据类型包括：整数，浮点，字符串，布尔，字典，列表，rosparam 使用 YAML 标记语言来作为数据的语法，如下：
+
+- 1：整数
+- 1.0：浮点
+- one：字符串
+- true：布尔
+- {a:b, c:d}：字典
+- [1, 2, 3]：列表
+
+rosparam 常用的命令如下：
+
+```sh
+rosparam set            set parameter
+rosparam get            get parameter
+rosparam load           load parameters from file
+rosparam dump           dump parameters to file
+rosparam delete         delete parameter
+rosparam list           list parameter names
+```
+
+下面就用这些命令来看看小乌龟有哪些参数。
+
+### 3.1 rosparam list
+
+保持之前的小乌龟节点运行，然后在命令行键入 list 命令：
+
+```sh
+rosparam list
+```
+
+输出以下参数，其中前 3 个是小乌龟窗口的背景颜色参数：
+
+```sh
+/background_b
+/background_g
+/background_r
+/rosdistro
+/roslaunch/uris/host_57aea0986fef__34309
+/rosversion
+/run_id
+```
+
+我们可以使用 set 和 get 命令来修改和获取对应参数的值。
+
+### 3.2 rosparam set & get
+
+我们先来改变以下背景颜色中 red 通道的颜色值：
+
+```sh
+# using: rosparm set [param_name] [param_value]
+rosparam set /background_r 150
+```
+
+修改了参数后，我们需要重新调用 clear 服务：
+
+```sh
+rosservice call /clear
+```
+
+可以看到小乌龟窗口的背景颜色改变了：
+
+<div  align="center">
+<img src="http://wiki.ros.org/ROS/Tutorials/UnderstandingServicesParams?action=AttachFile&do=get&target=turtle%28param%29.png"/>
+</div>
 
 
 
