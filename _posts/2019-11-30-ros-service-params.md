@@ -1,8 +1,8 @@
 ---
-title: ROS 入门 - 服务和参数
-date: 2019-11-25 20:00:00
+title: ROS 初级 - 服务和参数
+date: 2019-11-30 20:00:00
 ---
-# ROS 入门 - 服务和参数
+# ROS 初级 - 服务和参数
 ***
 > 版权声明：本文为 {{ site.name }} 原创文章，可以随意转载，但必须在明确位置注明出处！
 
@@ -202,15 +202,50 @@ rosservice call /clear
 <img src="http://wiki.ros.org/ROS/Tutorials/UnderstandingServicesParams?action=AttachFile&do=get&target=turtle%28param%29.png"/>
 </div>
 
+再来使用 get 命令获取 G 通道的值：
 
+```sh
+rosparam get /background_g
 
+86
+```
 
+如何获取全部的参数呢？`get /` 即可：
 
+```sh
+rosparam get /
 
+background_b: 255
+background_g: 86
+background_r: 150
+roslaunch:
+  uris: {'aqy:51932': 'http://aqy:51932/'}
+run_id: e07ea71e-98df-11de-8875-001b21201aa8
+```
 
-<div  align="center">
-<img src="https://dlonng.com/images/xxx/xxx.png"/>
-</div>
+### 3.3 rosparam dump & load
+
+dump 和 load 命令可以存储和恢复我们设置的参数，方便直接恢复已经设置过的参数：
+
+```sh
+rosparam dump [file_name] [namespace]
+rosparam load [file_name] [namespace]
+```
+
+我们来将刚才的小乌龟的参数存储到文件中：
+
+```sh
+rosparam dump params.yaml
+```
+
+再重新将这个文件加载回来，放到一个新的命名空间 copy 中：
+
+```
+rosparam load params.yaml copy
+rosparam get /copy/background_b
+
+255
+```
 
 > {{ site.prompt }}
 
