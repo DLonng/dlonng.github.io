@@ -32,7 +32,7 @@ rosrun rqt_console rqt_console
 ```
 
 <div  align="center">
-<img src="https://dlonng.com/images/ros/8log_console.png"/>
+<img src="https://dlonng.com/images/ros/log/8log_console.png"/>
 </div>
 
 再开启新的终端「Ctrl + Alt + T」：
@@ -42,7 +42,7 @@ rosrun rqt_logger_level rqt_logger_level
 ```
 
 <div  align="center">
-<img src="https://dlonng.com/images/ros/8log_level.png"/>
+<img src="https://dlonng.com/images/ros/log/8log_level.png"/>
 </div>
 
 接着我们就可以启动小乌龟节点，并查看节点输出的日志消息了，默认的日志等级是 Info：
@@ -55,13 +55,13 @@ rosrun turtlesim turtlesim_node
 查看 rqt_console 程序，可以看到小乌龟节点输出的 x，y 坐标信息：
 
 <div  align="center">
-<img src="https://dlonng.com/images/ros/8log_xy.png"/>
+<img src="https://dlonng.com/images/ros/log/8log_xy.png"/>
 </div>
 
-我们来改变下输出的日志等级，左下角 Reflesh 一下，选择 Loggers 将 Info 改为 Warn，看看会不会输出新的日志：
+我们来改变下输出的日志等级，左下角 Reflesh 一下，选择 Loggers 将 Info 改为 Warn：
 
 <div  align="center">
-<img src="https://dlonng.com/images/ros/8log_warn.png"/>
+<img src="https://dlonng.com/images/ros/log/8log_warn.png"/>
 </div>
 
 为了让小乌龟节点产生 Warn 的警告输出，我们使用 rostopic 命令来向小乌龟节点发送指令，让小乌龟撞到墙壁上去：
@@ -73,7 +73,7 @@ rostopic pub /turtle1/cmd_vel geometry_msgs/Twist -r 1 -- '{linear: {x: 2.0, y: 
 这是可以看到 rqt_console 程序输出了 Warn 日志信息：
 
 <div  align="center">
-<img src="https://dlonng.com/images/ros/8log_wall.png"/>
+<img src="https://dlonng.com/images/ros/log/8log_wall.png"/>
 </div>
 
 是不是很容易呢？那尝试改变其他的日志等级试试吧。

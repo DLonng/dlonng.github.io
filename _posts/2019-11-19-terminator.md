@@ -54,7 +54,16 @@ sudo apt-get install terminator
 - Ctrl + Tab：分割窗口之间切换
 - Ctrl + Shift + C：在 Shell 中复制
 - Ctrl + Shift + V：在 Shell 中粘贴
-- exit：输入 exit 命令退出当前窗口
+- Ctrl + Shift + W：退出当前窗口
+- Ctrl + Shift + Q：退出当前所有窗口，终端将被关闭
+- Alt + Up：移动到上面的终端
+- Alt + Down ：移动到下面的终端
+- Alt + Left ：移动到左边的终端
+- Alt + Right：移动到右边的终端
+- Ctrl + Shift + Right：在垂直分割的终端中将分割条向右移动
+- Ctrl + Shift + Left：在垂直分割的终端中将分割条向左移动
+- Ctrl + Shift + Up：在水平分割的终端中将分割条向上移动
+- Ctrl + Shift + Down：在水平分割的终端中将分割条向下移动
 - Ctrl + Super（Win）+ 方向上：最大化窗口
 - Ctrl + Super（Win）+ 方向下：最小化窗口
 - Ctrl + Super（Win）+ 方向左：把 Shell 窗口移动到屏幕左半边
