@@ -1,8 +1,8 @@
 ---
-title: PR2 Simulator 安装
+title: ROS 初级 - PR2 Simulator 安装
 date: 2019-08-07 20:00:00
 ---
-# PR2_Simulator
+# ROS 初级 - PR2 Simulator 安装
 ***
 > 版权声明：本文为 {{ site.name }} 原创文章，可以随意转载，但必须在明确位置注明出处！
 

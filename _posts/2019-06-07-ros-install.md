@@ -1,8 +1,8 @@
 ---
-title: ROS 入门 - ROS Fuerte 环境搭建
+title: ROS 初级 - 安装 ROS Fuerte
 date: 2019-06-07 15:00:00
 ---
-# ROS 入门 - ROS Fuerte 环境搭建
+# ROS 初级 - 安装 ROS Fuerte
 ***
 > 版权声明：本文为 {{ site.name }} 原创文章，可以随意转载，但必须在明确位置注明出处！
 
@@ -124,3 +124,4 @@ ROS Fuerte 的环境这就搭建完成了，其他版本搭建可能有些细微
 
 <div  align="center">
 <img src="{{ site.url }}/images/wechart.jpg" width = "200" height = "200"/>
+

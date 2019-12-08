@@ -1,8 +1,8 @@
 ---
-title: Writing a Simple Publisher and Subscriber (C++)
+title: ROS 初级 - 编写简单的发布者和订阅者(C++)
 date: 2019-06-14 20:00:00
 ---
-# Writing a Simple Publisher and Subscriber (C++)
+# ROS 初级 - 编写简单的发布者和订阅者(C++)
 ***
 > 版权声明：本文为 {{ site.name }} 原创文章，可以随意转载，但必须在明确位置注明出处！
 

@@ -1,8 +1,8 @@
 ---
-title: ROS 入门 - 理解 ROS 节点
+title: ROS 初级 - 理解 ROS Nodes
 date: 2019-06-11 20:00:00
 ---
-# ROS 入门 - 理解 ROS 节点
+# ROS 初级 - 理解 ROS Nodes
 ***
 > 版权声明：本文为 {{ site.name }} 原创文章，可以随意转载，但必须在明确位置注明出处！
 
@@ -47,3 +47,4 @@ rosnode list
 
 <div  align="center">
 <img src="{{ site.url }}/images/wechart.jpg" width = "200" height = "200"/>
+
