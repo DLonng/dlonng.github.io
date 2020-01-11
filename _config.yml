@@ -1,8 +1,8 @@
 ﻿# ----------- CONFIGURABLE START -----------
-title:            "程序小哥（DLonng）"
+title:            "DLonng"
 description:      "选择大于努力"
 url:              https://dlonng.com # Site url, without a slash at the end.
-prompt:           "推荐关注我的公众号：「程序小哥」，查看更多精品原创！"
+prompt:           "推荐关注我的公众号：「登龙」，查看更多精品原创！"
 signoff:          "DLonng" # Your name
 facebook_appid:   # APP ID for like button, remove from /_includes/share.html if unwanted.
 google_analytics: UA-100342964-1 # Set tracking, remove from /javascripts/basic.js if unwanted.
