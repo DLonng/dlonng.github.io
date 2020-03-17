@@ -89,7 +89,7 @@ cost funstion 或 loss function 用来估计你的机器学习模型的预测值
 
 这个卷积过程没有对所有元素进行，所以卷积后的图像变小了，但是卷积的过程是相同的。图像卷积可以对图像进行锐化，边缘检测，浮雕化，模糊等操作。
 
-图片来自：http://imgtec.eetrend.com/d6-imgtec/blog/2018-09/17919.html
+图片来自：[图像卷积](http://imgtec.eetrend.com/d6-imgtec/blog/2018-09/17919.html)
 
 ## 6 深度图
 
