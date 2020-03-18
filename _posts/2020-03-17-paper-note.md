@@ -3,9 +3,6 @@ title: 机器学习相关论文阅读笔记
 date: 2020-03-17 20:00:00
 ---
 # 机器学习相关论文阅读笔记
-***
-> 版权声明：本文为 {{ site.name }} 原创文章，可以随意转载，但必须在明确位置注明出处！
-
 最近看了一篇伪雷达论文，里面有些机器学习的概念不是很懂，这里记录下学习笔记。
 
 ## 1 端到端深度学习
@@ -48,9 +45,80 @@ date: 2020-03-17 20:00:00
 
 ## 3 卷积神经网络 CNN
 
+受到人类视觉系统的启发，人们发明了 CNN （图片@easyai.tech）：
+
+<div  align="center">
+<img src="https://easy-ai.oss-cn-shanghai.aliyuncs.com/2019-06-24-rennao.png"/>
+</div>
+
+CNN 擅长处理图片，有 2 个特点：
+
+1. 能够将大数据量的图片降维成小数据量
+2. 能够保留图片特征，符合图像处理的原则
+
+这两个特点也是之前人工智能处理图像的 2 个难点，现在有了 CNN 可以很好的解决，CNN 建立在前馈神经网络模型上，将其中的隐藏层换成了：
+
+- 卷积层（Convolution Layers）：提取特征
+- 池化层（Pooling Layers）：数据降维
+- 稠密层（Dense Layers）：输出结果
+
+<div  align="center">
+<img src="https://pic3.zhimg.com/80/v2-1be3fce36d25a22c95af61be39e97320_720w.jpg"/>
+</div>
+
+图片来自知乎：@[量子位](https://www.zhihu.com/org/liang-zi-wei-48)
+
+### 3.1 卷积层
+
+卷积就是用卷积核在图像上滑动，来提取图像特征，类似人眼的特征提取：
+
+<div  align="center">
+<img src="http://imgtec.eetrend.com/sites/imgtec.eetrend.com/files/201809/blog/17919-36801-6.gif"/>
+</div>
+
+一副图像可以使用多个卷积核提取特征，卷积核的数量就可以代表所提取的图像的底层纹理模式，比如使用 25 个卷积核提取一副图像的特征，则表示用这 25 种底层特征就能描绘一副图像。
+
+<div  align="center">
+<img src="https://easy-ai.oss-cn-shanghai.aliyuncs.com/2019-06-19-150926.jpg"/>
+</div>
+
+### 3.2 池化层
+
+池化层的作用是降低图片像素数据量，防止过拟合，降维过程可以用下面 2 个图概括（@量子位）：
+
+<div  align="center">
+<img src="https://pic4.zhimg.com/80/v2-d37874f6873f06f7a1216b6a5fd51022_720w.jpg"/>
+</div>
+
+<div  align="center">
+<img src="https://easy-ai.oss-cn-shanghai.aliyuncs.com/2019-06-19-chihua.gif"/>
+</div>
+
+常用最大池化（Max-Pooling），意思是用一个最大值表示一个网格。
+
+### 3.3 稠密层
+
+稠密层主要用来计算最后结果，就是前馈神经网络：
+
+<div  align="center">
+<img src="https://easy-ai.oss-cn-shanghai.aliyuncs.com/2019-06-19-quanlianjie.png"/>
+</div>
 
 
 
+CNN 常见应用：
+
+- 图像分类，检索
+- 人，车等目标检测
+- 目标分割
+- 人脸识别
+- 等等...
+
+参考博客：
+
+- [CNN笔记：通俗理解卷积神经网络](https://blog.csdn.net/v_JULY_v/article/details/51812459)
+- [卷积神经网络 – CNN](https://easyai.tech/ai-definition/cnn/)
+- [CNN（卷积神经网络）是什么？](https://www.zhihu.com/question/52668301)
 
 ## 4 损失函数
 
@@ -64,8 +132,6 @@ cost funstion 或 loss function 用来估计你的机器学习模型的预测值
 - 平方损失函数
 - 指数损失函数
 - Hinge 损失函数（SVM）
-
-
 
 ## 5 图像卷积
 
@@ -118,11 +184,6 @@ cost funstion 或 loss function 用来估计你的机器学习模型的预测值
 
 目前更加侧重于立体视觉（Stereo Vision）深度估计，就是用双目立体相机模仿人眼来进行深度估计，因为有多个角度的图片就能估计出视差的变化，从而求出深度值。
 
-
-
-<div  align="center">
-<img src="https://dlonng.com/images/xxx/xxx.png"/>
-</div>
 
 > {{ site.prompt }}
 
