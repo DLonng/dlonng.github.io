@@ -13,8 +13,9 @@ date: 2020-03-18 20:00:00
 标定就是找到雷达到相机的空间转换关系，在不同的坐标系之间转换需要旋转矩阵 R 和平移矩阵 T，为后续的雷达和相机数据融合做准备：
 
 <div  align="center">
-<img src="https://img-blog.csdn.net/20180903162619645?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xlYXJuaW5nX3RvcnRvc2ll/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70"/>
+<img src="https://pic2.zhimg.com/80/v2-c8a29440a3344eb702faf12c2a2aa6c9_720w.jpg"/>
 </div>
+
 
 
 
