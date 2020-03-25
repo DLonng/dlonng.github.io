@@ -27,6 +27,20 @@
 </script>
 {% endif %}
 
+
+<!-- 2020-03-25 添加数学公式语法支持：https://www.zhihu.com/question/62114522/answer/312834856-->
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      inlineMath: [['$','$']]
+    }
+  });
+</script>
+
+
+
 {% if site.facebook_appid %}
 <meta content="{{ site.facebook_appid }}" property="fb:app_id" />
 <script>(function(d, s, id) {
