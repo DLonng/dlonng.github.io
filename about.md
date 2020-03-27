@@ -5,9 +5,14 @@ title: About me
 ## About me
 厦门大学控制工程研究生，热衷于技术和写作，一个坚持精品原创的技术人！
 
+- 微信公众号：「**登龙**」
+
+  - <div  align="center">
+  <img src="https://dlonng.com/images/wechart.jpg" width = "200" height = "200"/>
+
 - 知乎：[登龙](https://www.zhihu.com/people/DLonng/activities)
 
-- 今日头条：[]()
+- 今日头条：[登龙zZ](https://www.toutiao.com/c/user/92980732255/#mid=1593181062528004)
 
 - segmentfault：[登龙](https://segmentfault.com/u/denglong_5e7b6da8891f9/articles)
 
@@ -25,8 +30,6 @@ title: About me
 
 - 个人微信：「DLonng」
   <div  align="center">
-  <img src="{{ site.url }}/images/DLonng.png" width = "180" height = "180"/>
+  <img src="https://dlonng.com/images/DLonng.png" width = "180" height = "180"/>
 
-- 微信公众号：「登龙」
-  <div  align="center">
-  <img src="{{ site.url }}/images/wechart.jpg" width = "200" height = "200"/>
+  
