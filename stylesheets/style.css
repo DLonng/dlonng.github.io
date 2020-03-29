@@ -5,9 +5,24 @@
 .link:hover { background: url(/images/line.png) repeat-x left bottom; }
 
 /* Markdown styles */
+
+.markdown-body {
+  /* 字间距 1 */
+  letter-spacing: 1px;
+
+  /* 行间距 1.6 */
+  line-height: 1.6;
+
+  /* 文字两端对齐 */
+  text-align: justify;
+
+}
+
 .markdown-body a {
   text-decoration: none;
   color: #357edd;
+
+
 }
 .markdown-body .highlighter-rouge {
   padding: .25rem .5rem;
@@ -32,5 +47,20 @@
   border-left: .2rem solid #ccc;
   padding-left: 3.8rem;
 }
+
+.markdown-body img { 
+  /* img center */
+  clear: both;
+  margin: 0 auto;
+  display: block;
+
+  /* img shadow */
+  box-shadow:0px 1px 4px rgba(0,0,0,0.3),0 0 40px rgba(0,0,0,0.1) inset;
+  webkit-box-shadow:0px 1px 4px rgba(0,0,0,0.3),0 0 40px rgba(0,0,0,0.1) inset;
+  moz-box-shadow:0px 1px 4px rgba(0,0,0,0.3),0 0 40px rgba(0,0,0,0.1) inset;
+  o-box-shadow:0px 1px 4px rgba(0,0,0,0.3),0 0 40px rgba(0,0,0,0.1) inset;
+
+}
+
 
 /* end Markdown styles */
