@@ -62,5 +62,45 @@
 
 }
 
+/* 2020-03-29 以下配置表格渲染格式：https://re-ra.xyz/Jekyll-%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E5%92%8C%E5%8A%9F%E8%83%BD%E6%B7%BB%E5%8A%A0/#%E8%A1%A8%E6%A0%BC%E6%A0%B7%E5%BC%8F*/
+table {
+  padding: 0; 
+  width: 100%;
+}
+
+table tr {
+  border-top: 1px solid #cccccc;
+  background-color: white;
+  margin: 0;
+  padding: 0; 
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8; 
+}
+
+table tr th {
+  font-weight: bold;
+  border: 1px solid #cccccc;
+  text-align: left;
+  margin: 0;
+  padding: 6px 13px; 
+}
+
+table tr td {
+  border: 1px solid #cccccc;
+  text-align: left;
+  margin: 0;
+  padding: 6px 13px; 
+}
+
+table tr th :first-child, table tr td :first-child {
+  margin-top: 0; 
+}
+
+table tr th :last-child, table tr td :last-child {
+  margin-bottom: 0; 
+}
+
 
 /* end Markdown styles */

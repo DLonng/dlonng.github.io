@@ -28,8 +28,31 @@
 {% endif %}
 
 
-<!-- 2020-03-25 添加数学公式语法支持：https://www.zhihu.com/question/62114522/answer/312834856 可能会导致网站打不开-->
+<!-- 2020-03-29 解决表格渲染失败的问题：https://blog.csdn.net/sdujava2011/article/details/83692576 ，换到 style.css 中渲染了 -->>
+<!--
+<style>
+  table{
+    border-left:1px solid #000000;
+    border-top:1px solid #000000;
+    width: 100%;
+    word-wrap:break-word; 
+    word-break:break-all;
+  }
+  
+  table th{
+    text-align:center;
+  }
 
+  table th,td{
+    border-right:1px solid #000000;
+    border-bottom:1px solid #000000;
+  }
+</style>
+-->
+
+
+
+<!-- 2020-03-25 添加数学公式语法支持：https://www.zhihu.com/question/62114522/answer/312834856 -->
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
