@@ -122,7 +122,7 @@ def get_X(df):
     data = pd.concat([ones, df], axis=1)
     
     # 返回特征矩阵
-    return data.iloc[:, :-1].iloc[:, :].values
+    return data.iloc[:, :-1].values
 ```
 
 为了简单点，这里假设原始房价数据只有 2 个输入特征，即房屋面积和卧室数量：
