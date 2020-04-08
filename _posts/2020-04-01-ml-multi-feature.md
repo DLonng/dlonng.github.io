@@ -224,7 +224,7 @@ final_theta, cost_data = batch_gradient_decent(theta, X, y, epoch, alpha = alpha
 
 话说我之前忘记讲解单变量梯度下降的代码了，下次一定补上！**文章内的代码仓库**：
 
-[https://github.com/DLonng/AI-Notes/blob/master/MachineLearning/code/ex1-linear%20regression/multi_feature.ipynb](https://github.com/DLonng/AI-Notes/blob/master/MachineLearning/code/ex1-linear regression/multi_feature.ipynb)
+[https://github.com/DLonng/AI-Notes/blob/master/MachineLearning/code/ex1-linear%20regression/multi_feature.ipynb](https://github.com/DLonng/AI-Notes/blob/master/MachineLearning/code/ex1-linear-regression/multi_feature.ipynb)
 
 OK，今天就跟大家分享这些，喜欢的小伙伴记得关注下面的公众号，持续关注我哦！
 
