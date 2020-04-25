@@ -279,7 +279,11 @@ def regularized_gradient(theta, X, y, lamd = 1):
 
 
 
-文中**完整可运行代码**链接：[https://github.com/DLonng/AI-Notes/blob/master/MachineLearning/code/ex2-logistic-regression/my_logistic_regular.ipynb](https://github.com/DLonng/AI-Notes/blob/master/MachineLearning/code/ex2-logistic-regression/my_logistic_regular.ipynb)
+文中**完整可运行代码**链接：
+
+
+
+[https://github.com/DLonng/AI-Notes/blob/master/MachineLearning/code/ex2-logistic-regression/my_logistic_regular.ipynb](https://github.com/DLonng/AI-Notes/blob/master/MachineLearning/code/ex2-logistic-regression/my_logistic_regular.ipynb)
 
 
 
