@@ -2,7 +2,7 @@
 title:            "登龙（DLonng）"
 description:      "选择大于努力"
 url:              https://dlonng.com # Site url, without a slash at the end.
-prompt:           "**本文原创首发于同名微信公号「登龙」，关注我就是你今年做的最成功的一件事**！"
+prompt:           "**本文原创首发于微信公号「登龙」，分享机器学习、算法编程、Python、机器人技术等原创文章，扫码即可关注**！"
 signoff:          "DLonng" # Your name
 facebook_appid:   # APP ID for like button, remove from /_includes/share.html if unwanted.
 google_analytics: UA-100342964-1 # Set tracking, remove from /javascripts/basic.js if unwanted.
