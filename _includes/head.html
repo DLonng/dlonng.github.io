@@ -18,6 +18,20 @@
 <!-- - -->
 
 {% if site.google_analytics %}
+
+<!-- 2020-05-08 添加预加载功能，使得在现代浏览器上性能提升；添加中国用户访问网站，但是因为谷歌分析而速度慢的问题 -->
+<!-- https://lcr.github.io/google-analytics-jekyll/ -->
+<script>
+  (function(e,t,n,i,s,a,c){e[n]=e[n]||function(){(e[n].q=e[n].q||[]).push(arguments)}
+  ;a=t.createElement(i);c=t.getElementsByTagName(i)[0];a.async=true;a.src=s
+  ;c.parentNode.insertBefore(a,c)
+  })(window,document,"galite","script","https://cdn.jsdelivr.net/npm/ga-lite@2/dist/ga-lite.min.js");
+
+  galite('create', '{{ site.google_analytics }}', 'auto');
+  galite('send', 'pageview');
+</script>
+
+<!--
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -27,6 +41,7 @@
   ga('send', 'pageview');
 
 </script>
+-->
 {% endif %}
 
 
