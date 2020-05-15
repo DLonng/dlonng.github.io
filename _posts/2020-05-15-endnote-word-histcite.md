@@ -2,7 +2,7 @@
 title: 拿出 3 个小时彻底搞定本硕博论文写作：EndNote、World、HistCite！
 date: 2020-05-15 23:00:00
 ---
-# 拿出 3 个小时彻底搞定本硕博论文写作：EndNote、World、HistCite！
+# 拿出 3 个小时彻底搞定本硕博论文写作：EndNote、Word、HistCite！
 ***
 > 版权声明：本文为 {{ site.name }} 原创文章，可以随意转载，但必须在明确位置注明出处！
 
