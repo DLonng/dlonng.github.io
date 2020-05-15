@@ -1,8 +1,8 @@
 ---
-title: ROS 初级 - 记录和回放数据
-date: 2019-06-15 22:00:00
+title: ROS 机器人技术 - rosbag 详细使用教程
+date: 2020-05-14 22:00:00
 ---
-# ROS 初级 - 记录和回放数据
+# ROS 机器人技术 - rosbag 详细使用教程
 ***
 > 版权声明：本文为 {{ site.name }} 原创文章，可以随意转载，但必须在明确位置注明出处！
 
@@ -34,7 +34,18 @@ rosbag record -O subset /turtle1/cmd_vel /turtle1/pose
 ## 4、不精准
 因为 roscord 命令受到系统时间微小变化的影响，所以回放的路径可能不精准。
 
+
+
+
+
+
+
+
+
+
+
+http://wiki.ros.org/rosbag/Commandline
+
 > {{ site.prompt }}
 
-<div  align="center">
-<img src="{{ site.url }}/images/wechart.jpg" width = "200" height = "200"/>
+![](https://dlonng.oss-cn-shenzhen.aliyuncs.com/blog/dlonng_qrcode.jpg#pic_center)

@@ -47,6 +47,9 @@ Camera-LIDAR 联合标定分为 2 步：
 - [激光雷达（lidar）和相机(camera)联合标定调研（基于Autoware的详细步骤）](https://blog.csdn.net/mxdsdo09/article/details/88370662)
 - [多目相机、Velodyne标定那些破事](http://s1nh.org/post/calib-velodyne-camera/)
 - [无人驾驶-激光雷达与相机联合校准（Lidar Camera Calibration）](https://blog.csdn.net/a2281965135/article/details/79785784?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-3&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-3)
+- [使用autoware获得相机内参并与雷达联合标定：标定双目、外参矩阵求逆问题](https://blog.csdn.net/Mr_yangsir/article/details/101013639)
+- [Autoware完整安装及联合标定工具箱安装](https://blog.csdn.net/qq_42615787/article/details/102481314)
+- [Autoware搭建自动驾驶系统.一：数据记录/播放和传感器校准](https://blog.csdn.net/jianxuezixuan/article/details/87283600?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-17.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-17.nonecase)
 
 
 
