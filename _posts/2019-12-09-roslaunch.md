@@ -1,8 +1,8 @@
 ---
-title: ROS 初级 - 解析 roslaunch 文件
+title: ROS 机器人技术 - 解析 roslaunch 文件
 date: 2020-02-15 18:00:00
 ---
-# ROS 初级 - 解析 roslaunch 文件
+# ROS 机器人技术 - 解析 roslaunch 文件
 ***
 > 版权声明：本文为 {{ site.name }} 原创文章，可以随意转载，但必须在明确位置注明出处！
 
