@@ -151,13 +151,34 @@ rosbag play --pause zed_calibration.bag
 
 联合标定也要准备标定板和录制 bag 包，标定板用的也是内参标定的棋盘格，另外因为我是在电脑上安装的 Autoware，所以需要在小车上录制雷达和相机的 Bag 数据包，然后再拷贝到我的电脑上回放用于标定工具的话题输入。
 
-我录制 bag 包的命令如下，录制的是ZED 左右相机话题、雷达话题：
+我录制 bag 包的命令如下，录制的是 ZED 左右相机话题、雷达话题：
 
 ```shell
 rosbag record -O zed_lidar_calibration.bag /camera/left/image_raw /camera/right/image_raw /rslidar_point
 ```
 
-但是录制完后，我拷贝到台式机上，还是提示我要 `reindex` 一下，我估计是小车系统的问题：
+录制的时候，因为我是 16 线雷达，所以我拿标定板的时候离雷达不能太远，不然就不能清楚地看到标定板了，录制时建议的站位如下：
+
+- 近处左边，近处中间，近处右边
+- 中间左边，中间中间，中间右边
+- 远处左边，远处中间，远处右边
+
+![](https://dlonng.oss-cn-shenzhen.aliyuncs.com/blog/calibr_pose_me.png)
+
+每个位置移动改变标定板的姿态，每个姿势停留 1 - 2 秒左右，防止模糊：
+
+- 上仰，下俯
+- 左偏，中间不动，右偏
+
+![](https://dlonng.oss-cn-shenzhen.aliyuncs.com/blog/check_board_pose.jpg)
+
+我录了挺多次的，也是自己摸索的，因为有的录制的不好，我也没有每个位置都录很久，有时候觉得差不多够了就停了，建议你第一次可以录久些，每个位置停留久一点，保证标定板不会因为移动而模糊！我总结的录制标定包的关键就是：
+
+- 录制多个位置
+- 改变拿标定板的姿势
+- 必须保证能清楚的看到标定板！
+
+我录制完后，拷贝到台式机上，回放时还是提示我要 `reindex` 一下，我估计是小车系统的问题：
 
 ```shell
 rosbag reindex zed_lidar_calibration.bag
@@ -179,7 +200,7 @@ rosbag play --pause zed_lidar_calibration.bag
 
 下面我们开始使用 `autoware_camera_lidar_calibrator` 工具标定雷达和相机。
 
-### 3.2 标定过程
+### 3.2 联合标定过程
 
 首先启动 roscore，也可以不用启动，后面 roslaunch 会自动启动：
 
