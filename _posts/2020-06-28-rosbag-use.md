@@ -54,6 +54,12 @@ rosbag play record.bag
 rosbag play -r 0.5 record.bag
 ```
 
+回放一个包中的指定主题：
+
+```shell
+rosbag play record.bag --topics /topic1 /topic2
+```
+
 回放完后，我一般会用 `rostopic list` 查看下发布的主题，确保是我需要的：
 
 ```shell
