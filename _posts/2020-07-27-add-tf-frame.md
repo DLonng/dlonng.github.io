@@ -53,7 +53,7 @@ int main(int argc, char** argv)
 
     tf2_ros::TransformBroadcaster tfb;
     geometry_msgs::TransformStamped transformStamped;
-        // 指定 carrot1 的父节点时 turtle1 
+    // 指定 carrot1 的父节点时 turtle1 
     // 即添加一个新的 carrot1 子坐标系到 turtle1 
     transformStamped.header.frame_id = "turtle1";
     transformStamped.child_frame_id = "carrot1";
@@ -75,9 +75,9 @@ int main(int argc, char** argv)
     while (node.ok()) {
         transformStamped.header.stamp = ros::Time::now();
 
-        // 这两行表示让该 carrot1 参考系随着时间移动
-        transformStamped.transform.translation.x = 2.0 * sin(ros::Time::now().toSec());
-        transformStamped.transform.translation.y = 2.0 * cos(ros::Time::now().toSec());
+        // 这两行表示让该 carrot1 参考系随着时间移动，打开注释小乌龟 2 的位置会随着时间改变
+        //transformStamped.transform.translation.x = 2.0 * sin(ros::Time::now().toSec());
+        //transformStamped.transform.translation.y = 2.0 * cos(ros::Time::now().toSec());
 
         // 将 carrot1 相对于 tutle1 的坐标变换广播到 TF 系统中
         tfb.sendTransform(transformStamped);
@@ -163,7 +163,7 @@ roslaunch learning_tf2 start_demo.launch
 
 你应该会发现现在的小乌龟产生的跟随运动与之前不一定了，两者之间的 y 方向有一定的距离，这个距离就是我们发布变换时指定的坐标系的相对位置：
 
-
+![](https://dlonng.oss-cn-shenzhen.aliyuncs.com/blog/add_tf_frame.gif)
 
 OK！TF 系统常用的基础就学完了，目前因为项目有用到 TF，所以写了几篇基础的文章，之前没有看过的可以再回过头看下：
 
