@@ -1,10 +1,10 @@
 ---
 title: 简历附件
-date: 2021-04-10 20:00:00
+date: 2021-04-10 11:00:00
 ---
 # 简历附件
 ***
-> 版权声明：本文为 {{ site.name }} 原创文章，可以随意转载，但必须在明确位置注明出处！
+
 
 ## 无人车
 
@@ -41,6 +41,18 @@ date: 2021-04-10 20:00:00
 ![](https://dlonng.oss-cn-shenzhen.aliyuncs.com/blog/20210410010803.png)
 
 ![](https://dlonng.oss-cn-shenzhen.aliyuncs.com/blog/20210410010724.png)
+
+## 基于 VC++ 平台的地面站安全监控系统
+
+![](https://dlonng.oss-cn-shenzhen.aliyuncs.com/blog/20210410104946.png)
+
+![](https://dlonng.oss-cn-shenzhen.aliyuncs.com/blog/20210410105259.png)
+
+## 本科毕设：基于 QT 平台的无人机地面站系统
+
+![](https://dlonng.oss-cn-shenzhen.aliyuncs.com/blog/20210410105116.png)
+
+![](https://dlonng.oss-cn-shenzhen.aliyuncs.com/blog/20210410105227.png)
 
 
 
