@@ -18,7 +18,7 @@ date: 2021-04-10 20:00:00
 
 ![](https://dlonng.oss-cn-shenzhen.aliyuncs.com/blog/20210410005904.png)
 
-## 语义 3D 地图构建（实验视频）
+## 语义 3D 地图构建（[实验视频](https://www.bilibili.com/video/BV1Q64y1D75N)）
 
 ![](https://dlonng.oss-cn-shenzhen.aliyuncs.com/blog/20210410010055.png)
 
