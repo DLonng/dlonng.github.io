@@ -5,7 +5,7 @@ date: 2020-04-10 10:00:00
 # 简历附件 - 语义 3D 地图构建
 ***
 
-## 语义点云融合（实验视频）
+## 语义点云融合
 
 ![](https://dlonng.oss-cn-shenzhen.aliyuncs.com/blog/20210410005904.png)
 
@@ -17,7 +17,7 @@ date: 2020-04-10 10:00:00
 
 ![](https://dlonng.oss-cn-shenzhen.aliyuncs.com/blog/20210410011129.png)
 
-## 可通行性代价地图投影（实验视频）
+## 可通行性代价地图投影
 
 ![](https://dlonng.oss-cn-shenzhen.aliyuncs.com/blog/20210410010148.png)
 
