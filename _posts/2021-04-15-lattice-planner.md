@@ -95,19 +95,23 @@ date: 2021-04-14 23:00:00
 
 **注意**：我们将横向偏移量 l 设计成纵向偏移量 s 的函数，这是因为对于大多数的汽车而言，横向运动是由纵向运动诱发的。
 
-#### 1.1 Step 1：采样起始、终止状态
+#### Step 1：采样起始、终止状态
 
 首先我们可以通过计算得到自动驾驶汽车在 Frenet 坐标系下的零时刻 `t0` 的起始状态（当前状态），为了生成一条轨迹，第一步就是在 Frenet 坐标系下采样一个在 `t1` 时刻的末状态。
 
 ![img](https://img-blog.csdn.net/20180903043159369?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3l1eHVhbjIwMDYyMDA3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
-#### 1.2 Step 2：多项式拟合横纵向轨迹
+#### Step 2：多项式拟合横纵向轨迹
 
 第二步就是将末状态和起始状态做 **5 次多项式拟合**，分别形成横向和纵向的多项式轨迹。
 
 ![img](https://img-blog.csdn.net/20180903043029272?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3l1eHVhbjIwMDYyMDA3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
-##### 1.2.1 采样横向轨迹（没看懂）
+
+
+**1.2.1 采样横向轨迹**
+
+
 
 横向轨迹的采样需要涵盖**多种横向运动状态**：
 
@@ -117,7 +121,11 @@ date: 2021-04-14 23:00:00
 
 ![img](https://img-blog.csdn.net/20180903043337639?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3l1eHVhbjIwMDYyMDA3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
-##### 1.2.2 采样纵向轨迹
+
+
+**1.2.2 采样纵向轨迹**
+
+
 
 对于纵向轨迹的采样，我们需要考虑三种状态
 
@@ -127,19 +135,31 @@ date: 2021-04-14 23:00:00
 
 ![img](https://img-blog.csdn.net/20180903043355603?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3l1eHVhbjIwMDYyMDA3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
-###### 巡航状态
+
+
+**（1）巡航状态**
+
+
 
 通过两层循环来完成采样。外层循环将速度从零到上限值按等间隔均匀遍历，内层循环遍历到达末状态速度的时间，从 1 秒到 8 秒按 1 秒的间隔均匀遍历，由于巡航状态**不需要指明到达末状态的 S 值（没有 $s(t_1)$ 的值）**，所以这里**只需要用四次多项式拟合**即可。
 
 ![img](https://img-blog.csdn.net/2018090304342678?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3l1eHVhbjIwMDYyMDA3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
-###### 停车状态
+
+
+**（2）停车状态**
+
+
 
 给定停车点，末状态的速度和加速度都是零，所以末状态是确定的，那么我们只需用一层循环来采样到达停车点的时间即可。
 
 ![img](https://img-blog.csdn.net/20180905040542956?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3l1eHVhbjIwMDYyMDA3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
-###### 超车或超车
+
+
+**（3）跟车或超车**
+
+
 
 在介绍跟车，超车的采样逻辑之前，需要介绍一下 S-T 图的概念，以下图中的场景为例，对应的 S-T 图就如右图所示：
 
@@ -168,7 +188,11 @@ date: 2021-04-14 23:00:00
 
 ![img](https://img-blog.csdn.net/2018090304360592?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3l1eHVhbjIwMDYyMDA3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
-##### 1.2.3 如何根据起始、终止状态拟合多项式
+
+
+**1.2.3 如何根据起始、终止状态拟合多项式**
+
+
 
 在给定被控对象的初始以及终止状态后，反向计算中间过程，我们需要对其进行**两点边界值问题（BVP）**的求解，才能求得两个状态之间轨迹。
 
@@ -180,7 +204,7 @@ date: 2021-04-14 23:00:00
 
 ![img](https://pic4.zhimg.com/80/v2-427a05d21ca9a1aaaa0fdd77b79f8c8b_720w.jpg)
 
-#### 1.3 Step 3：二维合成
+#### Step 3：二维合成
 
 最后将三组纵向轨迹组合起来，就可以获得所有纵向轨迹，再将所有纵向轨迹和所有横向轨迹两两配对二维合成，就可以完成轨迹采样的工作。
 
