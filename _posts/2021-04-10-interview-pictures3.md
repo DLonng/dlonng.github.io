@@ -10,7 +10,7 @@ date: 2020-04-10 12:00:00
 
 ![](https://dlonng.oss-cn-shenzhen.aliyuncs.com/blog/20210410010358.png)
 
-## 自主导航系统框架（实验视频）
+## 自主导航系统框架（[实验视频](https://www.bilibili.com/video/BV1DK411c788)）
 
 ![](https://dlonng.oss-cn-shenzhen.aliyuncs.com/blog/20210410010021.png)
 
