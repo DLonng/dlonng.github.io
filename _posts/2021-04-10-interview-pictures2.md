@@ -7,6 +7,8 @@ date: 2020-04-10 11:00:00
 
 ## CMU
 
+30 traj, 线速度恒定 9 km/h，角速度[-15, 15] rad/s
+
 ![](https://dlonng.oss-cn-shenzhen.aliyuncs.com/blog/Xnip2021-05-16_21-52-52.png)
 
 ## 语义 DWA 局部路径规划（改进 CMU + DWA）
